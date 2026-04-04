@@ -8,8 +8,7 @@
 export const SITE = {
   name: 'Rewan Tech Solutions',
   tagline: 'Premium IT Engineering Partner',
-  description:
-    'Premium IT engineering partner. Web, Mobile, AI, Cloud. Fixed-price contracts. Extraordinary results.',
+  description:'Premium IT engineering partner. Web, Mobile, AI, Cloud. Fixed-price contracts. Extraordinary results.',
   url: 'https://rewantechsolutions.com',
   logo: '/logo.svg',
   favicon: '/favicon.ico',
