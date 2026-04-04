@@ -150,7 +150,7 @@ input, textarea, select { font: inherit; color: var(--t1); }
   -webkit-background-clip:text; -webkit-text-fill-color:transparent;
   background-clip:text;
   animation:shimmer 4s linear infinite;
-  padding-right:0.07em;
+  padding-right:1em;
   display:inline-block;
 }
 .shim {
