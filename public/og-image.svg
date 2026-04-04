@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#050608"/>
+  <defs>
+    <linearGradient id="gr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <!-- Grid pattern -->
+  <pattern id="grid" width="52" height="52" patternUnits="userSpaceOnUse">
+    <path d="M 52 0 L 0 0 0 52" fill="none" stroke="rgba(37,99,235,0.08)" stroke-width="1"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <!-- Glow orb -->
+  <radialGradient id="orb" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="rgba(37,99,235,0.15)"/>
+    <stop offset="100%" stop-color="transparent"/>
+  </radialGradient>
+  <ellipse cx="600" cy="315" rx="500" ry="300" fill="url(#orb)"/>
+  <!-- Logo mark -->
+  <rect x="534" y="195" width="48" height="48" rx="12" fill="url(#gr)"/>
+  <path d="M543 219h18a7 7 0 0 1 0 14h-18" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <circle cx="566" cy="233" r="2.5" fill="rgba(255,255,255,0.7)"/>
+  <!-- Brand name -->
+  <text x="600" y="290" font-family="sans-serif" font-size="48" font-weight="800" fill="#eef2ff" text-anchor="middle" letter-spacing="-2">rewan<tspan fill="#3b82f6">tech</tspan></text>
+  <text x="600" y="340" font-family="sans-serif" font-size="20" fill="#818db3" text-anchor="middle" letter-spacing="1">SOLUTIONS</text>
+  <!-- Tagline -->
+  <text x="600" y="400" font-family="sans-serif" font-size="16" fill="#424b6e" text-anchor="middle">Premium IT Engineering Partner · rewantechsolutions.com</text>
+  <!-- Bottom line -->
+  <line x1="200" y1="450" x2="1000" y2="450" stroke="url(#gr)" stroke-width="1" opacity="0.4"/>
+  <text x="600" y="490" font-family="sans-serif" font-size="14" fill="#252a3e" text-anchor="middle">Web · Mobile · AI · Cloud · Design</text>
+</svg>
