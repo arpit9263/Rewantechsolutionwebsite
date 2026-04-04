@@ -34,7 +34,7 @@ export const metadata = {
     images: [SEO.og.image],
   },
   icons: {
-    icon: [{ url: '/favicon.ico', sizes: 'any' }, { url: '/icon.svg', type: 'image/svg+xml' }],
+    icon: [{ url: '/favicon.ico', sizes: 'any' }, { url: '/icon.png', type: 'image/png+xml' }],
     apple: '/apple-touch-icon.png',
   },
   manifest: '/site.webmanifest',

@@ -19,8 +19,8 @@ export const CONTACT = {
   email: 'rewantechsolutions@gmail.com',
   phone: '+91 8545098444',
   phoneRaw: '+918545098444',
-  whatsapp: '+91 7992127047',
-  whatsappRaw: '917992127047',
+  whatsapp: '+91 8545098444',
+  whatsappRaw: '918545098444',
   whatsappRaw2: '918545098444', // secondary WhatsApp
   formspreeEndpoint: 'https://formspree.io/f/meeprbqd',
 };

@@ -64,7 +64,7 @@ src/
 - ✅ Centralized config (`src/lib/config.js`)
 - ✅ Full SEO: meta tags, OG tags, Twitter cards on all pages
 - ✅ sitemap.xml + robots.txt
-- ✅ icon.svg favicon + site.webmanifest
+- ✅ icon.png favicon + site.webmanifest
 - ✅ `poweredByHeader: false` for security
 - ✅ Static export ready (`next build` → `/out` folder)
 
