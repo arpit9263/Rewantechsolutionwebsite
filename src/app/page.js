@@ -9,9 +9,11 @@ export const mobileNO = "7992127047";
 
 function R({ c = "rv", d = 0, children, style = {}, ...rest }) {
   const r = useRef(null);
+
   useEffect(() => {
     const el = r.current;
     if (!el) return;
+
     const io = new IntersectionObserver(
       ([e]) => {
         if (e.isIntersecting) {
@@ -21,9 +23,11 @@ function R({ c = "rv", d = 0, children, style = {}, ...rest }) {
       },
       { threshold: 0.07 },
     );
+
     io.observe(el);
     return () => io.disconnect();
   }, []);
+
   return (
     <div
       ref={r}
@@ -32,6 +36,123 @@ function R({ c = "rv", d = 0, children, style = {}, ...rest }) {
       {...rest}
     >
       {children}
+    </div>
+  );
+}
+
+/* =========================
+   Count Up Metric Component
+========================= */
+function parseMetricValue(value) {
+  const trimmed = value.trim();
+
+  if (trimmed === "100%") {
+    return { end: 100, prefix: "", suffix: "%", decimals: 0 };
+  }
+
+  if (trimmed === "50+") {
+    return { end: 50, prefix: "", suffix: "+", decimals: 0 };
+  }
+
+  if (trimmed === "40+") {
+    return { end: 40, prefix: "", suffix: "+", decimals: 0 };
+  }
+
+  if (trimmed === "24h") {
+    return { end: 24, prefix: "", suffix: "h", decimals: 0 };
+  }
+
+  if (trimmed === "5.0★") {
+    return { end: 5.0, prefix: "", suffix: "★", decimals: 1 };
+  }
+
+  if (trimmed === "₹3Cr+") {
+    return { end: 3, prefix: "₹", suffix: "Cr+", decimals: 0 };
+  }
+
+  const match = trimmed.match(/^([^0-9]*)(\d+(?:\.\d+)?)(.*)$/);
+  if (!match) {
+    return { end: 0, prefix: "", suffix: trimmed, decimals: 0 };
+  }
+
+  const [, prefix, numberPart, suffix] = match;
+  const decimals = numberPart.includes(".")
+    ? numberPart.split(".")[1].length
+    : 0;
+
+  return {
+    end: parseFloat(numberPart),
+    prefix,
+    suffix,
+    decimals,
+  };
+}
+
+function easeOutCubic(t) {
+  return 1 - Math.pow(1 - t, 3);
+}
+
+function CountUpMetric({ value, duration = 1800, className = "", style = {} }) {
+  const ref = useRef(null);
+  const [displayValue, setDisplayValue] = useState(0);
+  const [hasStarted, setHasStarted] = useState(false);
+
+  const { end, prefix, suffix, decimals } = parseMetricValue(value);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasStarted) {
+          setHasStarted(true);
+          io.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.35 },
+    );
+
+    io.observe(el);
+
+    return () => io.disconnect();
+  }, [hasStarted]);
+
+  useEffect(() => {
+    if (!hasStarted) return;
+
+    let rafId;
+    let startTime = null;
+
+    const animate = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const eased = easeOutCubic(progress);
+      const current = end * eased;
+
+      setDisplayValue(current);
+
+      if (progress < 1) {
+        rafId = requestAnimationFrame(animate);
+      }
+    };
+
+    rafId = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(rafId);
+  }, [hasStarted, end, duration]);
+
+  const formattedNumber =
+    decimals > 0
+      ? displayValue.toFixed(decimals)
+      : Math.round(displayValue).toString();
+
+  return (
+    <div ref={ref} className={className} style={style}>
+      {prefix}
+      {formattedNumber}
+      {suffix}
     </div>
   );
 }
@@ -414,17 +535,14 @@ export default function Home() {
             padding: "0 clamp(20px,5vw,80px)",
           }}
         >
-          {/* Background layers */}
           <div
             ref={bgRef}
             style={{ position: "absolute", inset: "-10%", zIndex: 0 }}
           >
-            {/* Grid */}
             <div
               className="hero-grid"
               style={{ position: "absolute", inset: 0, opacity: 0.7 }}
             />
-            {/* Radial vignette */}
             <div
               style={{
                 position: "absolute",
@@ -433,7 +551,6 @@ export default function Home() {
                   "radial-gradient(ellipse 80% 80% at 50% 50%, transparent 40%, var(--bg) 100%)",
               }}
             />
-            {/* Blue orb left */}
             <div
               style={{
                 position: "absolute",
@@ -448,7 +565,6 @@ export default function Home() {
                 pointerEvents: "none",
               }}
             />
-            {/* Cyan orb right */}
             <div
               style={{
                 position: "absolute",
@@ -465,7 +581,6 @@ export default function Home() {
             />
           </div>
 
-          {/* Scan line */}
           <div
             style={{
               position: "absolute",
@@ -490,7 +605,6 @@ export default function Home() {
             }}
           >
             <div style={{ maxWidth: 900 }}>
-              {/* Status badge */}
               <div style={{ animation: "rise 0.8s var(--ease) both" }}>
                 <div
                   style={{
@@ -547,7 +661,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Headline */}
               <h1
                 className="d1"
                 style={{
@@ -576,7 +689,10 @@ export default function Home() {
                     className="grad"
                     style={{
                       display: "inline-block",
-                      minWidth: 360,
+                      minWidth: "420px", // fixed width (adjust if needed)
+                      whiteSpace: "nowrap", //  force single line
+                      overflow: "hidden",
+                      textOverflow: "ellipsis", // optional safety
                       textAlign: "left",
                       transition: "all 0.3s",
                       opacity: show ? 1 : 0,
@@ -585,6 +701,19 @@ export default function Home() {
                   >
                     {WORDS[wIdx]}
                   </span>
+                  {/* <span
+                    className="grad"
+                    style={{
+                      display: "inline-block",
+                      minWidth: 360,
+                      textAlign: "left",
+                      transition: "all 0.3s",
+                      opacity: show ? 1 : 0,
+                      transform: show ? "none" : "translateY(-10px)",
+                    }}
+                  >
+                    {WORDS[wIdx]}
+                  </span> */}
                 </h1>
               </div>
               <h1
@@ -613,7 +742,6 @@ export default function Home() {
                 budget, with world-class quality. Fixed price. Always.
               </p>
 
-              {/* CTAs */}
               <div
                 style={{
                   display: "flex",
@@ -662,7 +790,6 @@ export default function Home() {
                 </Link>
               </div>
 
-              {/* Stats row */}
               <div
                 style={{
                   display: "grid",
@@ -676,7 +803,7 @@ export default function Home() {
                   maxWidth: 760,
                 }}
               >
-                {METRICS.slice(0, 4).map((m, i) => (
+                {METRICS.slice(0, 4).map((m) => (
                   <div
                     key={m.n}
                     style={{
@@ -691,15 +818,14 @@ export default function Home() {
                       (e.currentTarget.style.background = "var(--bg2)")
                     }
                   >
-                    <div
+                    <CountUpMetric
+                      value={m.n}
                       className="stat-n"
                       style={{
                         fontSize: "clamp(22px,2.5vw,30px)",
                         marginBottom: 4,
                       }}
-                    >
-                      {m.n}
-                    </div>
+                    />
                     <div
                       style={{
                         fontFamily: "var(--f-d)",
@@ -727,7 +853,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Floating badges - mouse parallax */}
           <div
             className="no-mob"
             style={{
@@ -798,8 +923,7 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Scroll indicator */}
-          <div
+          {/* <div
             style={{
               position: "absolute",
               bottom: 40,
@@ -832,7 +956,7 @@ export default function Home() {
                 background: "linear-gradient(to bottom,var(--bl),transparent)",
               }}
             />
-          </div>
+          </div> */}
         </section>
 
         {/* ═══════════════════════════════════════
@@ -917,7 +1041,6 @@ export default function Home() {
                     e.currentTarget.style.borderColor = s.bd;
                   }}
                 >
-                  {/* Icon glow bg */}
                   <div
                     style={{
                       position: "absolute",
@@ -930,7 +1053,6 @@ export default function Home() {
                       pointerEvents: "none",
                     }}
                   />
-                  {/* Icon */}
                   <div
                     style={{
                       width: 48,
@@ -1042,6 +1164,7 @@ export default function Home() {
                 <span className="grad">louder than promises</span>
               </h2>
             </R>
+
             <div
               style={{
                 display: "grid",
@@ -1071,15 +1194,14 @@ export default function Home() {
                     (e.currentTarget.style.background = "var(--bg2)")
                   }
                 >
-                  <div
+                  <CountUpMetric
+                    value={m.n}
                     className="stat-n"
                     style={{
                       fontSize: "clamp(36px,4vw,52px)",
                       marginBottom: 8,
                     }}
-                  >
-                    {m.n}
-                  </div>
+                  />
                   <div
                     className="d4"
                     style={{
@@ -1286,7 +1408,6 @@ export default function Home() {
                     e.currentTarget.style.boxShadow = "none";
                   }}
                 >
-                  {/* Decorative corner glow */}
                   <div
                     style={{
                       position: "absolute",
@@ -1637,8 +1758,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-
       </main>
     </Shell>
   );
