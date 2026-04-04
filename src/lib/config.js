@@ -15,7 +15,7 @@ export const SITE = {
 };
 
 export const CONTACT = {
-  email: 'rewantechsolutions@gmail.com',
+  email: 'rewansolutions@gmail.com',
   phone: '+91 8545098444',
   phoneRaw: '+918545098444',
   whatsapp: '+91 8545098444',
