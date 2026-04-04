@@ -1,7 +1,6 @@
 "use client";
 import Cursor from "@/components/ui/Cursor";
 import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { Shell } from "@/components/ui/Shell";
@@ -1807,7 +1806,6 @@ export default function Home() {
           </div>
         </section>
 
-        <Footer />
       </main>
     </Shell>
   );
