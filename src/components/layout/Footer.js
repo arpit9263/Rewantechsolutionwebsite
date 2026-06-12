@@ -396,6 +396,41 @@ export default function Footer() {
                 </div>
               </a>
 
+              <a
+                href={SOCIAL.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 10,
+                  background: 'rgba(10,102,194,0.07)',
+                  border: '1px solid rgba(10,102,194,0.15)',
+                  borderRadius: 'var(--rl)',
+                  padding: '14px 16px',
+                  marginBottom: 10,
+                  transition: 'all 0.25s',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'rgba(10,102,194,0.14)';
+                  e.currentTarget.style.borderColor = 'rgba(10,102,194,0.3)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'rgba(10,102,194,0.07)';
+                  e.currentTarget.style.borderColor = 'rgba(10,102,194,0.15)';
+                }}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0A66C2" strokeWidth="2">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+                <div>
+                  <div style={{ fontFamily: 'var(--f-d)', fontSize: 12, fontWeight: 600, color: '#0A66C2' }}>LinkedIn</div>
+                  <div style={{ fontFamily: 'var(--f-d)', fontSize: 10, color: 'var(--t3)' }}>@rewantechsolutions</div>
+                </div>
+              </a>
+
               <Link
                 href="/contact"
                 style={{

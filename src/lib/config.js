@@ -26,6 +26,7 @@ export const CONTACT = {
 
 export const SOCIAL = {
   instagram: 'https://instagram.com/rewantechsolutions',
+  linkedin: 'https://linkedin.com/company/rewantechsolutions',
   whatsapp: `https://wa.me/${CONTACT.whatsappRaw}?text=Hi%2C+I+want+to+discuss+a+project`,
   whatsapp2: `https://wa.me/${CONTACT.whatsappRaw2}?text=Hi%2C+I+want+to+discuss+a+project`,
 };
