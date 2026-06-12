@@ -45,6 +45,7 @@ const CASES = [
     color: '#34d399',
     bg: 'rgba(52,211,153,0.05)',
     liveUrl: 'https://edunest.org.in/',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f70e504c9?w=800&h=600&fit=crop',
     metrics: [
       { n: '2', l: 'Cities served' },
       { n: 'Nursery–12', l: 'Academic coverage' },
@@ -84,6 +85,7 @@ const CASES = [
     color: '#06b6d4',
     bg: 'rgba(6,182,212,0.05)',
     liveUrl: 'https://www.evhalt.com/',
+    image: 'https://images.unsplash.com/photo-1560958089-b8a63dd8b50b?w=800&h=600&fit=crop',
     metrics: [
       { n: '350+', l: 'Stations' },
       { n: '28', l: 'Cities' },
@@ -123,6 +125,7 @@ const CASES = [
     color: '#f59e0b',
     bg: 'rgba(245,158,11,0.05)',
     liveUrl: 'https://travelsuru.com/',
+    image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=600&fit=crop',
     metrics: [
       { n: 'Custom', l: 'Travel packages' },
       { n: 'Family', l: 'Trip planning focus' },
@@ -162,6 +165,7 @@ const CASES = [
     color: '#818cf8',
     bg: 'rgba(129,140,248,0.05)',
     liveUrl: 'https://knightman.in/',
+    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop',
     metrics: [
       { n: 'Schools', l: 'Service segment' },
       { n: 'Hotels', l: 'Service segment' },
@@ -201,6 +205,7 @@ const CASES = [
     color: '#f43f5e',
     bg: 'rgba(244,63,94,0.05)',
     liveUrl: 'https://aarbhaybeverages.com/',
+    image: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&h=600&fit=crop',
     metrics: [
       { n: 'Brand', l: 'Digital presence' },
       { n: 'Responsive', l: 'User experience' },
@@ -341,55 +346,56 @@ function CaseStudyModal({ project, onClose }) {
         position: 'fixed',
         inset: 0,
         zIndex: 9999,
-        background: 'rgba(2,6,23,0.70)',
-        backdropFilter: 'blur(10px)',
-        WebkitBackdropFilter: 'blur(10px)',
+        background: 'rgba(0,0,0,0.75)',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '24px',
+        padding: '20px',
       }}
     >
       <div
         onClick={(e) => e.stopPropagation()}
         style={{
-          width: 'min(1120px, 100%)',
-          maxHeight: '88vh',
+          width: 'min(1140px, 100%)',
+          maxHeight: '90vh',
           overflowY: 'auto',
-          borderRadius: 'var(--r3)',
-          border: '1px solid rgba(255,255,255,0.08)',
-          background: 'linear-gradient(180deg, #0b1220 0%, #101827 100%)',
-          boxShadow: '0 30px 80px rgba(2,6,23,0.45)',
+          borderRadius: '20px',
+          border: '1px solid rgba(255,255,255,0.1)',
+          background: 'linear-gradient(180deg, rgba(8,15,28,0.95) 0%, rgba(10,18,32,0.98) 100%)',
+          boxShadow: '0 40px 100px rgba(0,0,0,0.5)',
           position: 'relative',
         }}
       >
+        {/* Header */}
         <div
           style={{
             position: 'sticky',
             top: 0,
-            zIndex: 5,
+            zIndex: 10,
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
-            gap: 16,
-            padding: '18px 20px',
-            background: 'rgba(8,15,28,0.88)',
-            backdropFilter: 'blur(14px)',
-            WebkitBackdropFilter: 'blur(14px)',
+            gap: 20,
+            padding: '24px 32px',
+            background: 'rgba(8,15,28,0.8)',
+            backdropFilter: 'blur(16px)',
+            WebkitBackdropFilter: 'blur(16px)',
             borderBottom: '1px solid rgba(255,255,255,0.08)',
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, minWidth: 0 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 16, minWidth: 0 }}>
             <div
               style={{
-                width: 44,
-                height: 44,
+                width: 50,
+                height: 50,
                 borderRadius: '14px',
                 background: `${project.color}12`,
                 border: `1px solid ${project.color}25`,
                 display: 'grid',
                 placeItems: 'center',
-                fontSize: 22,
+                fontSize: 28,
                 flexShrink: 0,
               }}
             >
@@ -400,7 +406,7 @@ function CaseStudyModal({ project, onClose }) {
               <div
                 style={{
                   fontFamily: 'var(--f-d)',
-                  fontSize: 11,
+                  fontSize: '12px',
                   fontWeight: 700,
                   letterSpacing: '0.16em',
                   textTransform: 'uppercase',
@@ -413,7 +419,7 @@ function CaseStudyModal({ project, onClose }) {
               <div
                 style={{
                   fontFamily: 'var(--f-d)',
-                  fontSize: 18,
+                  fontSize: '20px',
                   fontWeight: 800,
                   color: '#f8fafc',
                   whiteSpace: 'nowrap',
@@ -431,146 +437,210 @@ function CaseStudyModal({ project, onClose }) {
             onClick={onClose}
             aria-label="Close"
             style={{
-              width: 42,
-              height: 42,
-              borderRadius: '14px',
-              background: 'rgba(255,255,255,0.06)',
-              border: '1px solid rgba(255,255,255,0.10)',
+              width: 44,
+              height: 44,
+              borderRadius: '12px',
+              background: 'rgba(255,255,255,0.08)',
+              border: '1px solid rgba(255,255,255,0.12)',
               color: '#cbd5e1',
-              fontSize: 18,
+              fontSize: '20px',
               cursor: 'pointer',
               flexShrink: 0,
+              transition: 'all 0.2s ease',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'rgba(255,255,255,0.12)';
+              e.currentTarget.style.color = '#f8fafc';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
+              e.currentTarget.style.color = '#cbd5e1';
             }}
           >
             ✕
           </button>
         </div>
 
-        <div style={{ padding: 'clamp(22px,3vw,34px)' }}>
+        {/* Main Content */}
+        <div style={{ padding: '40px' }}>
+          {/* Hero Section */}
           <div
             style={{
-              background: 'rgba(255,255,255,0.03)',
-              border: '1px solid rgba(255,255,255,0.08)',
-              borderRadius: 'var(--r3)',
-              overflow: 'hidden',
-              marginBottom: 20,
+              marginBottom: 40,
               position: 'relative',
+              padding: '32px',
+              borderRadius: '16px',
+              background: 'linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01))',
+              border: '1px solid rgba(255,255,255,0.08)',
+              overflow: 'hidden',
             }}
           >
             <div
               style={{
                 position: 'absolute',
-                top: -34,
-                right: -34,
-                width: 140,
-                height: 140,
+                top: -40,
+                right: -40,
+                width: 180,
+                height: 180,
                 borderRadius: '50%',
-                background: `radial-gradient(circle,${project.color}24 0%,transparent 70%)`,
+                background: `radial-gradient(circle, ${project.color}15 0%, transparent 70%)`,
                 pointerEvents: 'none',
               }}
             />
 
-            <div
-              style={{
-                padding: 'clamp(24px,3vw,36px)',
-                borderBottom: '1px solid rgba(255,255,255,0.08)',
-                position: 'relative',
-                zIndex: 1,
-              }}
-            >
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'flex-start',
-                  gap: 16,
-                  marginBottom: 16,
-                  flexWrap: 'wrap',
-                }}
-              >
-                <span style={{ fontSize: 40 }}>{project.img}</span>
-
+            <div style={{ position: 'relative', zIndex: 1 }}>
+              <div style={{ marginBottom: 20 }}>
                 <span
                   style={{
                     fontFamily: 'var(--f-d)',
-                    fontSize: 11,
-                    fontWeight: 600,
+                    fontSize: '12px',
+                    fontWeight: 700,
+                    letterSpacing: '0.12em',
+                    textTransform: 'uppercase',
                     color: project.color,
                     background: `${project.color}12`,
-                    border: `1px solid ${project.color}25`,
-                    padding: '4px 12px',
-                    borderRadius: 'var(--rf)',
+                    border: `1px solid ${project.color}20`,
+                    padding: '6px 14px',
+                    borderRadius: '999px',
+                    display: 'inline-block',
                   }}
                 >
-                  {project.cat}
+                  {project.cat.split(' · ')[0]}
                 </span>
               </div>
 
-              <h2
-                className="d3"
+              <h1
                 style={{
-                  fontSize: 'clamp(28px,4vw,40px)',
-                  marginBottom: 12,
+                  fontSize: '40px',
+                  fontWeight: 800,
+                  lineHeight: 1.1,
                   color: '#f8fafc',
-                  lineHeight: 1.02,
+                  marginBottom: 16,
                 }}
               >
                 {project.title}
-              </h2>
+              </h1>
 
               <p
                 style={{
-                  margin: 0,
-                  maxWidth: 760,
-                  color: '#94a3b8',
+                  fontSize: '15px',
                   lineHeight: 1.8,
-                  fontSize: 15,
+                  color: '#cbd5e1',
+                  maxWidth: '800px',
+                  marginBottom: 0,
                 }}
               >
-                A premium, conversion-focused digital experience designed to improve
-                brand clarity, trust, and business presentation.
+                A premium, conversion-focused digital experience designed to deliver brand clarity, user trust, and meaningful business outcomes.
               </p>
-            </div>
-
-            <div
-              style={{
-                padding: 'clamp(24px,3vw,36px)',
-                display: 'grid',
-                gridTemplateColumns: 'repeat(4, minmax(0,1fr))',
-                gap: 10,
-              }}
-              className="case-metric-grid"
-            >
-              {project.metrics.map((metric) => (
-                <MetricCard
-                  key={`${project.id}-${metric.l}`}
-                  metric={metric}
-                  color={project.color}
-                  compact
-                />
-              ))}
             </div>
           </div>
 
+          {/* Live Website Preview */}
+          <div
+            style={{
+              marginBottom: 40,
+              borderRadius: '16px',
+              border: '1px solid rgba(255,255,255,0.08)',
+              background: 'rgba(255,255,255,0.02)',
+              overflow: 'hidden',
+              minHeight: '500px',
+            }}
+          >
+            <iframe
+              src={project.liveUrl}
+              title={`${project.title} live website`}
+              style={{
+                width: '100%',
+                height: '500px',
+                border: 'none',
+                background: '#fff',
+              }}
+              sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox"
+            />
+          </div>
+
+          {/* Metrics Grid */}
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: '1.15fr 0.85fr',
-              gap: 20,
+              gridTemplateColumns: 'repeat(4, 1fr)',
+              gap: 14,
+              marginBottom: 40,
             }}
-            className="case-modal-grid"
           >
+            {project.metrics.map((metric) => (
+              <div
+                key={`${project.id}-${metric.l}`}
+                style={{
+                  background: 'rgba(255,255,255,0.03)',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                  borderRadius: '14px',
+                  padding: '18px 16px',
+                  textAlign: 'center',
+                  transition: 'all 0.3s ease',
+                }}
+              >
+                <div
+                  style={{
+                    fontFamily: 'var(--f-d)',
+                    fontWeight: 800,
+                    fontSize: '18px',
+                    color: project.color,
+                    marginBottom: 6,
+                  }}
+                >
+                  {metric.n}
+                </div>
+                <div
+                  style={{
+                    fontFamily: 'var(--f-d)',
+                    fontSize: '11px',
+                    fontWeight: 600,
+                    color: '#64748b',
+                    lineHeight: 1.4,
+                  }}
+                >
+                  {metric.l}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Content Grid */}
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: '1.3fr 0.7fr',
+              gap: 24,
+            }}
+          >
+            {/* Left Column */}
             <div style={{ display: 'grid', gap: 20 }}>
               <div
                 style={{
                   background: 'rgba(255,255,255,0.03)',
                   border: '1px solid rgba(255,255,255,0.08)',
-                  borderRadius: 'var(--r3)',
-                  padding: '24px',
+                  borderRadius: '14px',
+                  padding: '28px',
                 }}
               >
-                <SectionLabel>The challenge</SectionLabel>
-                <p className="body-sm" style={{ lineHeight: 1.9, margin: 0, color: '#cbd5e1' }}>
+                <h3
+                  style={{
+                    fontFamily: 'var(--f-d)',
+                    fontSize: '12px',
+                    fontWeight: 700,
+                    letterSpacing: '0.16em',
+                    textTransform: 'uppercase',
+                    color: project.color,
+                    marginBottom: 16,
+                  }}
+                >
+                  The Challenge
+                </h3>
+                <p style={{ fontSize: '14px', lineHeight: 1.8, color: '#cbd5e1', margin: 0 }}>
                   {project.challenge}
                 </p>
               </div>
@@ -579,12 +649,24 @@ function CaseStudyModal({ project, onClose }) {
                 style={{
                   background: 'rgba(255,255,255,0.03)',
                   border: '1px solid rgba(255,255,255,0.08)',
-                  borderRadius: 'var(--r3)',
-                  padding: '24px',
+                  borderRadius: '14px',
+                  padding: '28px',
                 }}
               >
-                <SectionLabel>Our solution</SectionLabel>
-                <p className="body-sm" style={{ lineHeight: 1.9, margin: 0, color: '#cbd5e1' }}>
+                <h3
+                  style={{
+                    fontFamily: 'var(--f-d)',
+                    fontSize: '12px',
+                    fontWeight: 700,
+                    letterSpacing: '0.16em',
+                    textTransform: 'uppercase',
+                    color: project.color,
+                    marginBottom: 16,
+                  }}
+                >
+                  Our Solution
+                </h3>
+                <p style={{ fontSize: '14px', lineHeight: 1.8, color: '#cbd5e1', margin: 0 }}>
                   {project.solution}
                 </p>
               </div>
@@ -593,13 +675,25 @@ function CaseStudyModal({ project, onClose }) {
                 style={{
                   background: 'rgba(255,255,255,0.03)',
                   border: '1px solid rgba(255,255,255,0.08)',
-                  borderRadius: 'var(--r3)',
-                  padding: '24px',
+                  borderRadius: '14px',
+                  padding: '28px',
                 }}
               >
-                <SectionLabel>Project highlights</SectionLabel>
+                <h3
+                  style={{
+                    fontFamily: 'var(--f-d)',
+                    fontSize: '12px',
+                    fontWeight: 700,
+                    letterSpacing: '0.16em',
+                    textTransform: 'uppercase',
+                    color: project.color,
+                    marginBottom: 16,
+                  }}
+                >
+                  Project Highlights
+                </h3>
 
-                <div style={{ display: 'grid', gap: 12 }}>
+                <div style={{ display: 'grid', gap: 10 }}>
                   {project.highlights.map((item) => (
                     <div
                       key={item}
@@ -607,26 +701,27 @@ function CaseStudyModal({ project, onClose }) {
                         display: 'flex',
                         alignItems: 'flex-start',
                         gap: 12,
-                        padding: '14px 14px',
-                        borderRadius: 'var(--rm)',
-                        background: 'rgba(255,255,255,0.04)',
-                        border: '1px solid rgba(255,255,255,0.07)',
+                        padding: '12px 14px',
+                        borderRadius: '10px',
+                        background: 'rgba(255,255,255,0.02)',
+                        border: '1px solid rgba(255,255,255,0.05)',
                       }}
                     >
                       <div
                         style={{
                           width: 24,
                           height: 24,
-                          borderRadius: '999px',
-                          background: `${project.color}14`,
+                          borderRadius: '50%',
+                          background: `${project.color}15`,
                           color: project.color,
-                          border: `1px solid ${project.color}25`,
-                          display: 'grid',
-                          placeItems: 'center',
+                          border: `1px solid ${project.color}30`,
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
                           fontSize: 12,
-                          fontWeight: 800,
+                          fontWeight: 700,
                           flexShrink: 0,
-                          marginTop: 1,
+                          marginTop: 2,
                         }}
                       >
                         ✓
@@ -635,8 +730,8 @@ function CaseStudyModal({ project, onClose }) {
                       <div
                         style={{
                           color: '#cbd5e1',
-                          lineHeight: 1.75,
-                          fontSize: 14,
+                          lineHeight: 1.6,
+                          fontSize: '13px',
                         }}
                       >
                         {item}
@@ -647,21 +742,45 @@ function CaseStudyModal({ project, onClose }) {
               </div>
             </div>
 
+            {/* Right Column */}
             <div style={{ display: 'grid', gap: 20 }}>
               <div
                 style={{
                   background: 'rgba(255,255,255,0.03)',
                   border: '1px solid rgba(255,255,255,0.08)',
-                  borderRadius: 'var(--r3)',
-                  padding: '24px',
+                  borderRadius: '14px',
+                  padding: '28px',
                 }}
               >
-                <SectionLabel>Tech stack</SectionLabel>
+                <h3
+                  style={{
+                    fontFamily: 'var(--f-d)',
+                    fontSize: '12px',
+                    fontWeight: 700,
+                    letterSpacing: '0.16em',
+                    textTransform: 'uppercase',
+                    color: project.color,
+                    marginBottom: 14,
+                  }}
+                >
+                  Tech Stack
+                </h3>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                   {project.stack.map((item) => (
-                    <Chip key={item} color={project.color}>
+                    <span
+                      key={item}
+                      style={{
+                        fontSize: '12px',
+                        fontWeight: 600,
+                        color: project.color,
+                        background: `${project.color}12`,
+                        border: `1px solid ${project.color}20`,
+                        padding: '6px 12px',
+                        borderRadius: '8px',
+                      }}
+                    >
                       {item}
-                    </Chip>
+                    </span>
                   ))}
                 </div>
               </div>
@@ -670,39 +789,95 @@ function CaseStudyModal({ project, onClose }) {
                 style={{
                   background: 'rgba(255,255,255,0.03)',
                   border: '1px solid rgba(255,255,255,0.08)',
-                  borderRadius: 'var(--r3)',
-                  padding: '24px',
+                  borderRadius: '14px',
+                  padding: '28px',
                 }}
               >
-                <SectionLabel>Services delivered</SectionLabel>
+                <h3
+                  style={{
+                    fontFamily: 'var(--f-d)',
+                    fontSize: '12px',
+                    fontWeight: 700,
+                    letterSpacing: '0.16em',
+                    textTransform: 'uppercase',
+                    color: project.color,
+                    marginBottom: 14,
+                  }}
+                >
+                  Services Delivered
+                </h3>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                   {project.services.map((item) => (
-                    <Chip key={item} color={project.color} subtle>
+                    <span
+                      key={item}
+                      style={{
+                        fontSize: '12px',
+                        fontWeight: 600,
+                        color: '#94a3b8',
+                        background: 'rgba(255,255,255,0.04)',
+                        border: '1px solid rgba(255,255,255,0.08)',
+                        padding: '6px 12px',
+                        borderRadius: '8px',
+                      }}
+                    >
                       {item}
-                    </Chip>
+                    </span>
                   ))}
                 </div>
               </div>
 
               <div
                 style={{
-                  background: 'rgba(255,255,255,0.03)',
-                  border: '1px solid rgba(255,255,255,0.08)',
-                  borderRadius: 'var(--r3)',
-                  padding: '24px',
+                  background: `linear-gradient(135deg, ${project.color}08, transparent)`,
+                  border: `1px solid ${project.color}20`,
+                  borderRadius: '14px',
+                  padding: '28px',
                 }}
               >
-                <SectionLabel>Quick actions</SectionLabel>
+                <h3
+                  style={{
+                    fontFamily: 'var(--f-d)',
+                    fontSize: '12px',
+                    fontWeight: 700,
+                    letterSpacing: '0.16em',
+                    textTransform: 'uppercase',
+                    color: project.color,
+                    marginBottom: 14,
+                  }}
+                >
+                  Next Steps
+                </h3>
 
                 <div style={{ display: 'grid', gap: 10 }}>
                   <a
                     href={project.liveUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="btn btn-s"
-                    style={{ width: '100%', justifyContent: 'center' }}
+                    style={{
+                      display: 'block',
+                      padding: '12px 16px',
+                      fontFamily: 'var(--f-d)',
+                      fontSize: '13px',
+                      fontWeight: 600,
+                      color: '#fff',
+                      background: `linear-gradient(135deg, ${project.color}, ${project.color}cc)`,
+                      border: 'none',
+                      borderRadius: '10px',
+                      cursor: 'pointer',
+                      textAlign: 'center',
+                      textDecoration: 'none',
+                      transition: 'all 0.2s ease',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-2px)';
+                      e.currentTarget.style.boxShadow = `0 12px 30px ${project.color}35`;
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'none';
+                      e.currentTarget.style.boxShadow = 'none';
+                    }}
                   >
-                    Visit live project
+                    Visit Live Project
                   </a>
 
                   <a
@@ -711,10 +886,31 @@ function CaseStudyModal({ project, onClose }) {
                     )}`}
                     target="_blank"
                     rel="noreferrer"
-                    className="btn btn-wa"
-                    style={{ width: '100%', justifyContent: 'center' }}
+                    style={{
+                      display: 'block',
+                      padding: '12px 16px',
+                      fontFamily: 'var(--f-d)',
+                      fontSize: '13px',
+                      fontWeight: 600,
+                      color: '#25d366',
+                      background: 'rgba(37,211,102,0.1)',
+                      border: '1px solid rgba(37,211,102,0.3)',
+                      borderRadius: '10px',
+                      cursor: 'pointer',
+                      textAlign: 'center',
+                      textDecoration: 'none',
+                      transition: 'all 0.2s ease',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = 'rgba(37,211,102,0.15)';
+                      e.currentTarget.style.transform = 'translateY(-2px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = 'rgba(37,211,102,0.1)';
+                      e.currentTarget.style.transform = 'none';
+                    }}
                   >
-                    Build something similar
+                    Build Something Similar
                   </a>
                 </div>
               </div>
@@ -723,23 +919,15 @@ function CaseStudyModal({ project, onClose }) {
         </div>
 
         <style jsx>{`
-          .case-modal-grid {
-            grid-template-columns: 1.15fr 0.85fr;
-          }
-
-          .case-metric-grid {
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-          }
-
           @media (max-width: 960px) {
-            .case-modal-grid {
+            div[style*="gridTemplateColumns: '1.3fr 0.7fr'"] {
               grid-template-columns: 1fr;
             }
           }
 
           @media (max-width: 640px) {
-            .case-metric-grid {
-              grid-template-columns: repeat(2, minmax(0, 1fr));
+            div[style*="gridTemplateColumns: 'repeat(4,"] {
+              grid-template-columns: repeat(2, 1fr);
             }
           }
         `}</style>
@@ -787,94 +975,119 @@ export default function WorkPage() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill,minmax(340px,1fr))',
-              gap: 20,
+              gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
+              gap: 28,
             }}
           >
             {CASES.map((c, i) => (
               <R key={c.id} c="rv" d={i * 0.07}>
                 <div
                   style={{
-                    background: c.bg,
-                    border: '1px solid var(--bdr)',
-                    borderRadius: 'var(--r3)',
+                    background: 'linear-gradient(180deg, rgba(15,23,42,0.45), rgba(8,14,28,0.55))',
+                    border: '1px solid rgba(255,255,255,0.04)',
+                    borderRadius: '16px',
                     overflow: 'hidden',
-                    transition: 'all 0.4s var(--ease)',
+                    transition: 'all 0.35s var(--ease)',
                     height: '100%',
                     display: 'flex',
                     flexDirection: 'column',
-                    cursor: 'default',
+                    cursor: 'pointer',
                   }}
-                  data-h
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = `${c.color}40`;
-                    e.currentTarget.style.transform = 'translateY(-8px)';
-                    e.currentTarget.style.boxShadow = `0 24px 60px ${c.color}15`;
+                    e.currentTarget.style.borderColor = `${c.color}30`;
+                    e.currentTarget.style.transform = 'translateY(-12px)';
+                    e.currentTarget.style.boxShadow = `0 32px 80px ${c.color}20`;
+                    e.currentTarget.style.background = 'linear-gradient(180deg, rgba(20,30,50,0.6), rgba(12,18,35,0.65))';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = 'var(--bdr)';
+                    e.currentTarget.style.borderColor = 'rgba(255,255,255,0.04)';
                     e.currentTarget.style.transform = 'none';
                     e.currentTarget.style.boxShadow = 'none';
+                    e.currentTarget.style.background = 'linear-gradient(180deg, rgba(15,23,42,0.45), rgba(8,14,28,0.55))';
                   }}
                 >
+                  {/* Preview Section */}
                   <div
                     style={{
-                      padding: 'clamp(24px,3vw,36px)',
+                      height: '160px',
+                      background: c.bg,
                       position: 'relative',
                       overflow: 'hidden',
                       display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <img
+                      src={c.image}
+                      alt={c.title}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        objectPosition: 'center',
+                      }}
+                    />
+                    <div
+                      style={{
+                        position: 'absolute',
+                        inset: 0,
+                        background: `linear-gradient(135deg, ${c.color}08 0%, transparent 100%)`,
+                      }}
+                    />
+                  </div>
+
+                  {/* Content Section */}
+                  <div
+                    style={{
+                      padding: '28px 24px',
+                      display: 'flex',
                       flexDirection: 'column',
                       flex: 1,
+                      position: 'relative',
                     }}
                   >
                     <div
                       style={{
                         position: 'absolute',
-                        top: -30,
-                        right: -30,
-                        width: 120,
-                        height: 120,
+                        top: -40,
+                        right: -40,
+                        width: 100,
+                        height: 100,
                         borderRadius: '50%',
-                        background: `radial-gradient(circle,${c.color}20 0%,transparent 70%)`,
+                        background: `radial-gradient(circle, ${c.color}12 0%, transparent 70%)`,
                         pointerEvents: 'none',
                       }}
                     />
 
-                    <div
+                    <span
                       style={{
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        alignItems: 'flex-start',
-                        marginBottom: 16,
-                        gap: 12,
+                        fontFamily: 'var(--f-d)',
+                        fontSize: '11px',
+                        fontWeight: 700,
+                        letterSpacing: '0.12em',
+                        textTransform: 'uppercase',
+                        color: c.color,
+                        background: `${c.color}12`,
+                        border: `1px solid ${c.color}20`,
+                        padding: '5px 10px',
+                        borderRadius: '999px',
+                        width: 'fit-content',
+                        marginBottom: '12px',
                         position: 'relative',
                         zIndex: 1,
                       }}
                     >
-                      <span style={{ fontSize: 36 }}>{c.img}</span>
-                      <span
-                        style={{
-                          fontFamily: 'var(--f-d)',
-                          fontSize: 11,
-                          fontWeight: 600,
-                          color: c.color,
-                          background: `${c.color}12`,
-                          border: `1px solid ${c.color}25`,
-                          padding: '4px 12px',
-                          borderRadius: 'var(--rf)',
-                          textAlign: 'right',
-                        }}
-                      >
-                        {c.cat}
-                      </span>
-                    </div>
+                      {c.cat.split(' · ')[0]}
+                    </span>
 
                     <h3
-                      className="d3"
                       style={{
-                        fontSize: 'clamp(20px,2.5vw,26px)',
-                        marginBottom: 14,
+                        fontSize: '22px',
+                        fontWeight: 700,
+                        lineHeight: 1.2,
                         color: 'var(--t1)',
+                        marginBottom: '12px',
                         position: 'relative',
                         zIndex: 1,
                       }}
@@ -882,87 +1095,99 @@ export default function WorkPage() {
                       {c.title}
                     </h3>
 
+                    <p
+                      style={{
+                        fontSize: '13px',
+                        lineHeight: 1.6,
+                        color: '#94a3b8',
+                        marginBottom: '16px',
+                        position: 'relative',
+                        zIndex: 1,
+                      }}
+                    >
+                      {c.solution.slice(0, 120)}...
+                    </p>
+
+                    {/* Metrics */}
                     <div
                       style={{
                         display: 'grid',
-                        gridTemplateColumns: 'repeat(2, minmax(0,1fr))',
-                        gap: 10,
+                        gridTemplateColumns: 'repeat(2, 1fr)',
+                        gap: '10px',
+                        marginBottom: '18px',
                         position: 'relative',
                         zIndex: 1,
-                        marginBottom: 16,
                       }}
                     >
-                      {c.metrics.map((metric) => (
-                        <MetricCard
+                      {c.metrics.slice(0, 2).map((metric) => (
+                        <div
                           key={`${c.id}-${metric.l}`}
-                          metric={metric}
-                          color={c.color}
-                          compact
-                        />
+                          style={{
+                            background: 'rgba(255,255,255,0.02)',
+                            border: '1px solid rgba(255,255,255,0.05)',
+                            borderRadius: '10px',
+                            padding: '10px 8px',
+                            textAlign: 'center',
+                          }}
+                        >
+                          <div
+                            style={{
+                              fontFamily: 'var(--f-d)',
+                              fontWeight: 700,
+                              fontSize: '13px',
+                              color: c.color,
+                              marginBottom: '2px',
+                            }}
+                          >
+                            {metric.n}
+                          </div>
+                          <div
+                            style={{
+                              fontFamily: 'var(--f-d)',
+                              fontSize: '9px',
+                              color: '#64748b',
+                              lineHeight: 1.3,
+                            }}
+                          >
+                            {metric.l}
+                          </div>
+                        </div>
                       ))}
                     </div>
 
-                    <p
-                      className="body-sm"
-                      style={{
-                        lineHeight: 1.8,
-                        color: 'var(--t2)',
-                        marginBottom: 0,
-                        position: 'relative',
-                        zIndex: 1,
-                      }}
-                    >
-                      {c.solution.slice(0, 150)}...
-                    </p>
-
                     <div style={{ flex: 1 }} />
 
+                    {/* Button */}
                     <button
                       type="button"
                       onClick={() => setSelectedProject(c)}
                       style={{
                         width: '100%',
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        alignItems: 'center',
-                        padding: '16px clamp(20px,2.5vw,24px)',
-                        marginTop: 18,
+                        padding: '12px 16px',
+                        marginTop: '8px',
                         fontFamily: 'var(--f-d)',
-                        fontSize: 13,
+                        fontSize: '13px',
                         fontWeight: 600,
-                        color: 'var(--t2)',
-                        transition: 'all 0.25s ease',
-                        background: 'transparent',
-                        border: '1px solid var(--bdr)',
-                        borderRadius: 'var(--rm)',
+                        color: '#fff',
+                        background: `linear-gradient(135deg, ${c.color}, ${c.color}cc)`,
+                        border: 'none',
+                        borderRadius: '10px',
                         cursor: 'pointer',
+                        transition: 'all 0.25s ease',
                         position: 'relative',
                         zIndex: 1,
+                        overflow: 'hidden',
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.color = c.color;
-                        e.currentTarget.style.borderColor = `${c.color}40`;
-                        e.currentTarget.style.background = `${c.color}05`;
+                        e.currentTarget.style.transform = 'translateY(-2px)';
+                        e.currentTarget.style.boxShadow = `0 12px 30px ${c.color}35`;
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.color = 'var(--t2)';
-                        e.currentTarget.style.borderColor = 'var(--bdr)';
-                        e.currentTarget.style.background = 'transparent';
+                        e.currentTarget.style.transform = 'none';
+                        e.currentTarget.style.boxShadow = 'none';
                       }}
                     >
-                      View case study
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        style={{ flexShrink: 0 }}
-                      >
-                        <path d="M5 12h14" />
-                        <path d="M13 5l7 7-7 7" />
-                      </svg>
+                      View Case Study →
                     </button>
                   </div>
                 </div>
