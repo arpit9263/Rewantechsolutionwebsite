@@ -45,7 +45,7 @@ const CASES = [
     color: '#34d399',
     bg: 'rgba(52,211,153,0.05)',
     liveUrl: 'https://edunest.org.in/',
-    image: 'https://images.unsplash.com/photo-1516321318423-f06f70e504c9?w=800&h=600&fit=crop',
+    image: '/images/edunest.png',
     metrics: [
       { n: '2', l: 'Cities served' },
       { n: 'Nursery–12', l: 'Academic coverage' },
@@ -85,7 +85,7 @@ const CASES = [
     color: '#06b6d4',
     bg: 'rgba(6,182,212,0.05)',
     liveUrl: 'https://www.evhalt.com/',
-    image: 'https://images.unsplash.com/photo-1560958089-b8a63dd8b50b?w=800&h=600&fit=crop',
+    image: '/images/evhalt.png',
     metrics: [
       { n: '350+', l: 'Stations' },
       { n: '28', l: 'Cities' },

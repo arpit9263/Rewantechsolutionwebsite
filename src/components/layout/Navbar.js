@@ -18,6 +18,7 @@ export default function Navbar() {
   const [sc, setSc] = useState(false);
   const [open, setOpen] = useState(false);
   const path = usePathname();
+  const normalizedPath = (path || "").replace(/\/+$/, "") || "/";
 
   useEffect(() => {
     const fn = () => setSc(window.scrollY > 60);
@@ -73,23 +74,35 @@ export default function Navbar() {
           style={{ display: "flex", alignItems: "center", gap: 1 }}
         >
           {LINKS.map((l) => {
-            const active = path === l.href;
+            const active =
+              normalizedPath === l.href ||
+              (l.href !== "/" && normalizedPath.startsWith(`${l.href}/`));
             return (
               <Link
                 key={l.href}
                 href={l.href}
+                aria-current={active ? "page" : undefined}
                 style={{
                   fontFamily: "var(--f-d)",
-                  fontWeight: 500,
+                  fontWeight: active ? 700 : 600,
                   fontSize: 13,
                   letterSpacing: "-0.01em",
-                  color: active ? "var(--bl)" : "var(--t2)",
-                  padding: "7px 15px",
-                  borderRadius: "var(--rf)",
-                  background: active ? "var(--bg-b)" : "transparent",
+                  color: active ? "#ffffff" : "var(--t2)",
+                  padding: "9px 15px",
+                  borderRadius: "999px",
+                  background: active
+                    ? "rgba(37,99,235,0.22)"
+                    : "transparent",
                   border: active
-                    ? "1px solid var(--ln-b)"
+                    ? "1px solid rgba(37,99,235,0.48)"
                     : "1px solid transparent",
+                  outline: active
+                    ? "1px solid rgba(255,255,255,0.06)"
+                    : "none",
+                  boxShadow: active
+                    ? "inset 0 1px 0 rgba(255,255,255,0.08), 0 10px 24px rgba(37,99,235,0.18)"
+                    : "none",
+                  transform: active ? "translateY(-1px)" : "none",
                   transition: "all 0.25s var(--ease)",
                 }}
                 onMouseEnter={(e) => {
@@ -259,26 +272,32 @@ export default function Navbar() {
             pointerEvents: "none",
           }}
         />
-        {LINKS.map((l, i) => (
-          <Link
-            key={l.href}
-            href={l.href}
-            style={{
-              fontFamily: "var(--f-d)",
-              fontWeight: 800,
-              fontSize: "clamp(28px,7vw,44px)",
-              letterSpacing: "-0.05em",
-              color: path === l.href ? "var(--bl)" : "var(--t1)",
-              opacity: open ? 1 : 0,
-              transform: open ? "none" : "translateY(16px)",
-              transition: `opacity 0.45s var(--ease) ${i * 0.07}s,transform 0.45s var(--ease) ${i * 0.07}s`,
-              position: "relative",
-              zIndex: 1,
-            }}
-          >
-            {l.label}
-          </Link>
-        ))}
+        {LINKS.map((l, i) => {
+          const active =
+            normalizedPath === l.href ||
+            (l.href !== "/" && normalizedPath.startsWith(`${l.href}/`));
+          return (
+            <Link
+              key={l.href}
+              href={l.href}
+              aria-current={active ? "page" : undefined}
+              style={{
+                fontFamily: "var(--f-d)",
+                fontWeight: 800,
+                fontSize: "clamp(28px,7vw,44px)",
+                letterSpacing: "-0.05em",
+                color: active ? "var(--bl)" : "var(--t1)",
+                opacity: open ? 1 : 0,
+                transform: open ? "none" : "translateY(16px)",
+                transition: `opacity 0.45s var(--ease) ${i * 0.07}s,transform 0.45s var(--ease) ${i * 0.07}s`,
+                position: "relative",
+                zIndex: 1,
+              }}
+            >
+              {l.label}
+            </Link>
+          );
+        })}
         <div
           style={{
             display: "flex",
