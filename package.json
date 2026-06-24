@@ -2,6 +2,14 @@
   "name": "rewan-tech-solutions",
   "version": "0.2.0",
   "private": true,
-  "scripts": { "dev": "next dev", "build": "next build", "start": "next start" },
-  "dependencies": { "next": "15.1.0", "react": "^19.0.0", "react-dom": "^19.0.0" }
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^16.2.9",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  }
 }
