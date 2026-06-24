@@ -1,5 +1,5 @@
 import './globals.css';
-import { SEO, SITE } from '@/lib/config';
+import { SEO, SITE, ORG_SCHEMA, WEBSITE_SCHEMA } from '@/lib/config';
 
 export const metadata = {
   metadataBase: new URL(SITE.url),
@@ -24,7 +24,7 @@ export const metadata = {
     siteName: SITE.name,
     title: SEO.defaultTitle,
     description: SEO.description,
-    images: [{ url: SEO.og.image, width: SEO.og.imageWidth, height: SEO.og.imageHeight, alt: SITE.name + ' — Premium IT Engineering' }],
+    images: [{ url: SEO.og.image, width: SEO.og.imageWidth, height: SEO.og.imageHeight, alt: SITE.name + ' — Web, Mobile, AI & Digital Growth Solutions' }],
   },
   twitter: {
     card: SEO.twitter.card,
@@ -50,6 +50,14 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
         <meta name="theme-color" content="#050608" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_SCHEMA) }}
+        />
       </head>
       <body>{children}</body>
     </html>

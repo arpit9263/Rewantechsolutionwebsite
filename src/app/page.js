@@ -408,8 +408,8 @@ const WHY = [
         <polyline points="17 6 23 6 23 12" />
       </svg>
     ),
-    t: "Indian Pricing, Global Standard",
-    d: "World-class engineering at a fraction of Western agency rates.",
+    t: "Practical Pricing, Reliable Standards",
+    d: "Strong engineering, practical pricing, and clear communication for Indian and global businesses.",
   },
   {
     icon: (
@@ -449,21 +449,21 @@ const WHY = [
 
 const TESTIMONIALS = [
   {
-    q: "Rewan Tech embedded with our team and shipped a banking app our users genuinely love. Technical quality and communication are rare in any market.",
-    name: "Arjun Mehta",
-    role: "CEO, FinEdge Technologies",
+    q: "The team understood our business quickly and turned the requirement into a clean, usable digital platform. Communication stayed clear from planning to launch.",
+    name: "EduNest Team",
+    role: "EdTech Platform",
     g: "linear-gradient(135deg,#a78bfa,#3b82f6)",
   },
   {
-    q: "Complex multi-vendor marketplace, shipped in 11 weeks. Sub-200ms pages on day one. They don't just build it — they think deeply about it.",
-    name: "Priya Sharma",
-    role: "Founder, ShopNova",
+    q: "Our hospital website became easier for patients to understand and contact. The WhatsApp-first flow helped us handle enquiries more smoothly.",
+    name: "Kamla Hospital",
+    role: "Healthcare Website",
     g: "linear-gradient(135deg,#06b6d4,#3b82f6)",
   },
   {
-    q: "Our AI triage engine hit 94% accuracy — better than we dared spec. What surprised me was how fast they grasped the healthcare domain.",
-    name: "Rahul Gupta",
-    role: "CTO, MediAssist Health",
+    q: "They converted our EV charging idea into a structured digital presence with strong visuals, clear information flow and reliable execution.",
+    name: "EV Halt Team",
+    role: "EV Infrastructure",
     g: "linear-gradient(135deg,#f43f5e,#a78bfa)",
   },
 ];
@@ -735,9 +735,7 @@ export default function Home() {
                   animation: "rise 0.85s var(--ease) 0.32s both",
                 }}
               >
-                Rewan Tech is an elite engineering studio. We design, build, and
-                launch web apps, mobile apps, and AI products — on time, on
-                budget, with world-class quality. Fixed price. Always.
+                Rewan Tech Solutions builds reliable websites, mobile apps, custom software, AI-powered tools, and digital growth systems for businesses that want to launch faster and scale with confidence.
               </p>
 
               <div
@@ -1253,7 +1251,7 @@ export default function Home() {
                 className="ey"
                 style={{ marginBottom: 14, justifyContent: "center" }}
               >
-                Why Rewan Tech
+                Why Rewan Tech Solutions
               </div>
               <h2 className="d2" style={{ fontSize: "clamp(28px,4vw,52px)" }}>
                 The difference is in

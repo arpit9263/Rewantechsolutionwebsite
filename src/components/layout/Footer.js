@@ -133,11 +133,11 @@ export default function Footer() {
             <h2 className="d2" style={{ fontSize: 'clamp(24px,4vw,52px)', marginBottom: 14 }}>
               Ready to build something
               <br />
-              <span className="grad">extraordinary?</span>
+              <span className="grad">with clarity?</span>
             </h2>
 
             <p className="body" style={{ fontSize: 16, maxWidth: 420 }}>
-              Free 30-min discovery call. Fixed-price proposal in 24h. Your code, your IP.
+              Share your requirement and get a clear project plan, realistic timeline, and transparent proposal.
             </p>
           </div>
 
@@ -191,7 +191,7 @@ export default function Footer() {
             <div>
               <LogoMark />
               <p className="body-sm" style={{ maxWidth: 280, marginBottom: 24, lineHeight: 1.8 }}>
-                Premium IT engineering partner. We design, build, and scale digital products that drive real business outcomes.
+                Rewan Tech Solutions builds websites, mobile apps, custom software, AI tools and digital growth systems for businesses across India.
               </p>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>

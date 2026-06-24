@@ -1,9 +1,9 @@
 export const metadata = {
   title: 'About Us',
-  description: 'Meet the team behind Rewan Tech Solutions — premium IT engineering partners delivering web, mobile, AI and cloud solutions with fixed-price contracts.',
+  description: 'Learn about Rewan Tech Solutions, a software and digital solutions company helping businesses build reliable websites, mobile apps, AI systems and digital growth platforms.',
   openGraph: {
-    title: 'About Us — Rewan Tech Solutions',
-    description: 'Meet the team behind Rewan Tech Solutions — premium IT engineering partners delivering web, mobile, AI and cloud solutions with fixed-price contracts.',
+    title: 'About Us | Rewan Tech Solutions',
+    description: 'Learn about Rewan Tech Solutions, a software and digital solutions company helping businesses build reliable websites, mobile apps, AI systems and digital growth platforms.',
   },
 };
 

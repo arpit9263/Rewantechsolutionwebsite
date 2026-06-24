@@ -16,28 +16,28 @@ function R({ c='rv', d=0, children, style={}, ...rest }) {
 const SVC = [
   { n:'01', color:'#3b82f6', bg:'rgba(59,130,246,0.07)', bd:'rgba(59,130,246,0.2)',
     icon:<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>,
-    title:'Web Development', tag:'High-performance apps that convert.',
-    desc:'Production-grade web apps with Next.js, React, Node.js and TypeScript. From marketing sites to complex SaaS — every line optimised for performance, SEO and conversion.',
+    title:'Web Development', tag:'Fast, reliable websites and web apps.',
+    desc:'Modern websites and web applications built with Next.js, React, Node.js and TypeScript. We focus on performance, responsive design, SEO structure and maintainable code.',
     feats:['Next.js / React / Vue','Node.js / NestJS APIs','PostgreSQL / MongoDB','REST & GraphQL','CI/CD pipelines','Core Web Vitals'],
     dels:['Technical spec & architecture','Figma design + assets','Full source code','Staging + production deploy','1-month post-launch support'],
     time:'6–16 weeks', price:'₹80,000+' },
   { n:'02', color:'#a78bfa', bg:'rgba(167,139,250,0.07)', bd:'rgba(167,139,250,0.2)',
     icon:<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="17" r="1" fill="currentColor"/></svg>,
-    title:'Mobile Apps', tag:'Native-quality iOS & Android.',
+    title:'Mobile Apps', tag:'Practical apps for iOS and Android.',
     desc:'Cross-platform apps in React Native and Flutter. We handle design, development, testing and App Store submission from start to finish.',
     feats:['React Native / Flutter','iOS & Android','Push notifications','Offline-first','App Store submission','Crash monitoring'],
     dels:['UX wireframes + prototype','iOS + Android builds','Store listings & assets','Post-launch monitoring','Full documentation'],
     time:'8–20 weeks', price:'₹1,20,000+' },
   { n:'03', color:'#f43f5e', bg:'rgba(244,63,94,0.07)', bd:'rgba(244,63,94,0.2)',
     icon:<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>,
-    title:'AI & Machine Learning', tag:'AI that solves real problems.',
-    desc:'LLM integration, custom ML models, and AI-powered features that drive measurable ROI. From intelligent chatbots to computer vision systems.',
+    title:'AI & Machine Learning', tag:'AI features for useful business outcomes.',
+    desc:'LLM integration, custom ML models, and AI-powered features for support, automation, content, analytics and knowledge search. From chatbots to computer vision systems, we build around real use cases.',
     feats:['LLM integration','Custom ML models','NLP & text analytics','Computer vision','RAG / knowledge bases','MLOps & monitoring'],
     dels:['AI solution design','Trained & tested model','API + integration','Accuracy benchmarks','Monitoring dashboard'],
     time:'4–12 weeks', price:'₹60,000+' },
   { n:'04', color:'#06b6d4', bg:'rgba(6,182,212,0.07)', bd:'rgba(6,182,212,0.2)',
     icon:<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>,
-    title:'Cloud & DevOps', tag:'Infrastructure that scales from day one.',
+    title:'Cloud & DevOps', tag:'Stable infrastructure for growing products.',
     desc:'Architect, migrate, and manage cloud infrastructure on AWS and GCP. CI/CD pipelines, container orchestration, and IaC that reduce ops burden and cost.',
     feats:['AWS / GCP / Azure','Kubernetes & Docker','Terraform IaC','GitHub Actions CI/CD','Auto-scaling','Cost optimisation'],
     dels:['Architecture diagram','IaC (Terraform)','CI/CD pipelines','Runbook docs','Cost forecast'],
@@ -77,9 +77,9 @@ export default function ServicesPage() {
     <Shell>
       <PageHero
         eyebrow="What we build"
-        title="Every service you need"
-        accent="under one roof"
-        desc="From a landing page to an enterprise AI platform — fixed price, on time, with engineering quality that lasts."
+        title="Digital services built"
+        accent="around business goals"
+        desc="From business websites and mobile apps to AI tools, cloud infrastructure and digital growth systems — planned clearly and built for long-term use."
         pill="8 core services"
         ctas={<>
           <Link href="/contact" className="btn btn-p btn-lg">Get a Quote →</Link>

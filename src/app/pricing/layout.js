@@ -1,9 +1,9 @@
 export const metadata = {
-  title: 'Transparent Pricing',
-  description: 'Fixed-price packages for web, mobile, and AI solutions. No hourly billing. No hidden fees. See exactly what you get.',
+  title: 'Pricing',
+  description: 'Explore practical pricing guidance for websites, mobile apps, AI solutions, digital marketing and custom software projects.',
   openGraph: {
-    title: 'Transparent Pricing — Rewan Tech Solutions',
-    description: 'Fixed-price packages for web, mobile, and AI solutions. No hourly billing. No hidden fees. See exactly what you get.',
+    title: 'Pricing | Rewan Tech Solutions',
+    description: 'Explore practical pricing guidance for websites, mobile apps, AI solutions, digital marketing and custom software projects.',
   },
 };
 

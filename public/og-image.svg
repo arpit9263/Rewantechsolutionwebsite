@@ -25,7 +25,7 @@
   <text x="600" y="290" font-family="sans-serif" font-size="48" font-weight="800" fill="#eef2ff" text-anchor="middle" letter-spacing="-2">rewan<tspan fill="#3b82f6">tech</tspan></text>
   <text x="600" y="340" font-family="sans-serif" font-size="20" fill="#818db3" text-anchor="middle" letter-spacing="1">SOLUTIONS</text>
   <!-- Tagline -->
-  <text x="600" y="400" font-family="sans-serif" font-size="16" fill="#424b6e" text-anchor="middle">Premium IT Engineering Partner · rewantechsolutions.com</text>
+  <text x="600" y="400" font-family="sans-serif" font-size="16" fill="#424b6e" text-anchor="middle">Web, Mobile, AI & Digital Growth Solutions · rewantechsolutions.com</text>
   <!-- Bottom line -->
   <line x1="200" y1="450" x2="1000" y2="450" stroke="url(#gr)" stroke-width="1" opacity="0.4"/>
   <text x="600" y="490" font-family="sans-serif" font-size="14" fill="#252a3e" text-anchor="middle">Web · Mobile · AI · Cloud · Design</text>
