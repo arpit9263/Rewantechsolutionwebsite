@@ -82,4 +82,32 @@
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
+
+<url>
+  <loc>https://rewantechsolutions.com/blog/</loc>
+  <lastmod>2026-04-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://rewantechsolutions.com/blog/hospital-website-development-cost-india/</loc>
+  <lastmod>2026-04-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.75</priority>
+</url>
+
+<url>
+  <loc>https://rewantechsolutions.com/blog/school-website-features/</loc>
+  <lastmod>2026-04-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.75</priority>
+</url>
+
+<url>
+  <loc>https://rewantechsolutions.com/blog/mobile-app-development-cost-india/</loc>
+  <lastmod>2026-04-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.75</priority>
+</url>
 </urlset>
