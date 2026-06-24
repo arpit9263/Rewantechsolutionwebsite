@@ -48,4 +48,38 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+<url>
+  <loc>https://rewantechsolutions.com/solutions/</loc>
+  <lastmod>2026-04-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://rewantechsolutions.com/solutions/healthcare/</loc>
+  <lastmod>2026-04-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://rewantechsolutions.com/solutions/education/</loc>
+  <lastmod>2026-04-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://rewantechsolutions.com/solutions/travel/</loc>
+  <lastmod>2026-04-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://rewantechsolutions.com/solutions/technology/</loc>
+  <lastmod>2026-04-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
 </urlset>
