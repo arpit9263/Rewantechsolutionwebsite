@@ -434,6 +434,6 @@ h1, h2, h3, h4, p, a, span, div { overflow-wrap: break-word; }
 
 @media (max-width: 480px) {
   .hero-dynamic-word {
-    font-size: clamp(24px, 6vw, 42px);
+    font-size: clamp(24px, 9vw, 42px);
   }
 }
