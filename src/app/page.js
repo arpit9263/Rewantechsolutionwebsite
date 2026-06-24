@@ -604,7 +604,7 @@ export default function Home() {
               paddingBottom: "clamp(80px,10vh,120px)",
             }}
           >
-            <div style={{ maxWidth: 900 }}>
+            <div style={{ maxWidth: '100%' }}>
               <div style={{ animation: "rise 0.8s var(--ease) both" }}>
                 <div
                   style={{
