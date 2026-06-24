@@ -683,19 +683,16 @@ export default function Home() {
               >
                 <h1
                   className="d1"
-                  style={{ fontSize: "clamp(52px,8vw,106px)" }}
+                  // style={{ fontSize: "clamp(52px,8vw,106px)" }}
+                  style={{
+                    whiteSpace: "nowrap",
+                    fontSize: "clamp(26px, 8vw, 106px)",
+                    lineHeight: 0.95,
+                  }}
                 >
                   <span
-                    className="grad"
+                    className="grad hero-dynamic-word"
                     style={{
-                      display: "inline-block",
-                      minWidth: 0,
-                      maxWidth: "100%",
-                      whiteSpace: "normal",
-                      overflowWrap: "break-word",
-                      wordBreak: "break-word",
-                      textAlign: "left",
-                      transition: "all 0.3s",
                       opacity: show ? 1 : 0,
                       transform: show ? "none" : "translateY(-10px)",
                     }}

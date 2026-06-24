@@ -415,3 +415,25 @@ h1, h2, h3, h4, p, a, span, div { overflow-wrap: break-word; }
   }
   nav img, nav svg { max-width: min(220px, calc(100vw - 110px)); height: auto; }
 }
+
+
+.hero-dynamic-word {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: clamp(32px, 8vw, 106px);
+  line-height: 0.95;
+  max-width: 100%;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hero-dynamic-word {
+    font-size: clamp(28px, 7vw, 58px);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-dynamic-word {
+    font-size: clamp(24px, 6vw, 42px);
+  }
+}
