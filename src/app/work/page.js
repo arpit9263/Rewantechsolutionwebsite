@@ -76,7 +76,55 @@ const CASES = [
       'Lead capture flow designed for better enquiry conversion',
       'Responsive frontend built for mobile-first discovery',
     ],
-    img: '🎓',
+    img: '/images/edunest-logo.jpeg',
+  },
+  {
+    id: 'kamla-hospital',
+    title: 'Kamla Hospital',
+    cat: 'Healthcare · Multi-Speciality Hospital',
+    color: '#3b82f6',
+    bg: 'rgba(59,130,246,0.05)',
+    liveUrl: 'https://www.kamlahospitaljhansi.in/',
+    image: '/images/kamlahospital.png',
+    metrics: [
+      { n: '24/7', l: 'Emergency Care' },
+      { n: 'Multi-Speciality', l: 'Healthcare Services' },
+      { n: 'Patient-Centric', l: 'Treatment Approach' },
+      { n: 'Digital Presence', l: 'Enhanced Accessibility' },
+    ],
+    challenge:
+      'Kamla Hospital required a modern digital presence that could build trust with patients, clearly showcase medical services, improve accessibility to hospital information, and provide an easy way for patients to connect with the hospital online.',
+
+    solution:
+      'We designed and developed a professional healthcare website focused on trust, accessibility, and user experience. The platform highlights hospital services, doctor information, contact details, emergency support, and enquiry channels while ensuring a seamless experience across all devices.',
+
+    stack: [
+      'React',
+      'Next.js',
+      'Tailwind CSS',
+      'Responsive Design',
+      'SEO Optimization',
+      'Performance Optimization',
+    ],
+
+    services: [
+      'Website Design',
+      'Healthcare UI/UX',
+      'Web Development',
+      'SEO Optimization',
+      'Mobile Responsive Design',
+    ],
+
+    highlights: [
+      'Trust-focused healthcare design with professional visual hierarchy',
+      'Clear presentation of hospital services and facilities',
+      'Mobile-first responsive experience for patients',
+      'Fast-loading pages optimized for local search visibility',
+      'Easy access to emergency contacts and enquiry channels',
+      'Modern UI designed to strengthen patient confidence',
+    ],
+    img: '/images/kamla-hospital-logo.jpg',
+
   },
   {
     id: 'evhalt',
@@ -116,127 +164,7 @@ const CASES = [
       'Fast CTA-driven structure for clearer action paths',
       'Responsive layout with sharper trust and scale messaging',
     ],
-    img: '⚡',
-  },
-  {
-    id: 'travelsuru',
-    title: 'Travel Suru',
-    cat: 'Travel · Booking & Tour Enquiry Website',
-    color: '#f59e0b',
-    bg: 'rgba(245,158,11,0.05)',
-    liveUrl: 'https://travelsuru.com/',
-    image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=600&fit=crop',
-    metrics: [
-      { n: 'Custom', l: 'Travel packages' },
-      { n: 'Family', l: 'Trip planning focus' },
-      { n: 'Seamless', l: 'Travel support' },
-      { n: 'Enquiry-led', l: 'Lead model' },
-    ],
-    challenge:
-      'Travel Suru needed a digital presence that makes tour discovery feel easier, warmer, and more trustworthy. The site had to support enquiry-based conversion for holiday packages, itineraries, and destination planning.',
-    solution:
-      'We built a travel-business website structure around destination storytelling, trip enquiry intent, package presentation, and mobile-friendly lead generation so visitors can quickly move from browsing to contacting the business.',
-    stack: [
-      'Next.js',
-      'React',
-      'Responsive Layout',
-      'Service Pages',
-      'Lead Forms',
-      'Business Website Architecture',
-    ],
-    services: [
-      'Web Development',
-      'UI/UX Design',
-      'Service Website Structuring',
-      'Mobile Optimisation',
-    ],
-    highlights: [
-      'Warm travel storytelling built around package enquiries',
-      'Simple structure for quick browsing and conversion',
-      'Mobile-friendly design for on-the-go users',
-      'Clear service presentation for business growth',
-    ],
-    img: '✈️',
-  },
-  {
-    id: 'knightman',
-    title: 'Knightman Security Services',
-    cat: 'Security Services · Business Website',
-    color: '#818cf8',
-    bg: 'rgba(129,140,248,0.05)',
-    liveUrl: 'https://knightman.in/',
-    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop',
-    metrics: [
-      { n: 'Schools', l: 'Service segment' },
-      { n: 'Hotels', l: 'Service segment' },
-      { n: 'Hospitals', l: 'Service segment' },
-      { n: 'Societies', l: 'Service segment' },
-    ],
-    challenge:
-      'Knightman needed a business website that presents its security services with more credibility and clarity. The website had to communicate professionalism, operational trust, and sector coverage for commercial and residential clients.',
-    solution:
-      'We structured the site around service trust signals, clear business positioning, and easy enquiry pathways so Knightman can present itself as a serious, high-quality security services provider across key use cases.',
-    stack: [
-      'Next.js',
-      'React',
-      'Corporate UI',
-      'Service Positioning',
-      'Lead Capture',
-      'Responsive Frontend',
-    ],
-    services: [
-      'Web Development',
-      'Corporate UI/UX',
-      'Business Positioning',
-      'Conversion Flow Design',
-    ],
-    highlights: [
-      'Professional visual direction built around trust',
-      'Sector-based service positioning for credibility',
-      'Easy enquiry paths for business leads',
-      'Clear and serious frontend presentation',
-    ],
-    img: '🛡️',
-  },
-  {
-    id: 'aarbhay',
-    title: 'Aarbhay Beverages',
-    cat: 'Beverages · Brand Website',
-    color: '#f43f5e',
-    bg: 'rgba(244,63,94,0.05)',
-    liveUrl: 'https://aarbhaybeverages.com/',
-    image: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&h=600&fit=crop',
-    metrics: [
-      { n: 'Brand', l: 'Digital presence' },
-      { n: 'Responsive', l: 'User experience' },
-      { n: 'Scalable', l: 'Website foundation' },
-      { n: 'Modern', l: 'Business identity' },
-    ],
-    challenge:
-      'Aarbhay Beverages required an online foundation that supports a growing beverage business with stronger brand presence, legitimacy, and future marketing readiness. The site needed to look polished while staying simple and expandable.',
-    solution:
-      'We developed a clean business presence for the brand with product and business storytelling, trust-oriented layout, mobile responsiveness, and a structure that can scale into a stronger beverage marketing site as the brand grows.',
-    stack: [
-      'Next.js',
-      'React',
-      'Responsive UI',
-      'Brand Layout System',
-      'Business Content Structure',
-      'SEO-Ready Frontend',
-    ],
-    services: [
-      'Web Development',
-      'Brand UI/UX',
-      'Business Website Setup',
-      'Responsive Design',
-    ],
-    highlights: [
-      'Clean and polished frontend for an emerging brand',
-      'Scalable website foundation for future campaigns',
-      'Trust-focused business storytelling',
-      'Responsive design for broader reach',
-    ],
-    img: '🥤',
+    img: '/images/evhalt-logo.png',
   },
 ];
 
@@ -388,8 +316,8 @@ function CaseStudyModal({ project, onClose }) {
           <div style={{ display: 'flex', alignItems: 'center', gap: 16, minWidth: 0 }}>
             <div
               style={{
-                width: 50,
-                height: 50,
+                width: 60,
+                height: 60,
                 borderRadius: '14px',
                 background: `${project.color}12`,
                 border: `1px solid ${project.color}25`,
@@ -399,7 +327,18 @@ function CaseStudyModal({ project, onClose }) {
                 flexShrink: 0,
               }}
             >
-              {project.img}
+              <img
+                src={project.img}
+                alt={project.title}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'contain',
+                  objectPosition: 'center',
+                  borderRadius: '12px',
+
+                }}
+              />
             </div>
 
             <div style={{ minWidth: 0 }}>

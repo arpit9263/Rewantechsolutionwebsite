@@ -321,25 +321,25 @@ const STACK = [
 
 const CASES = [
   {
-    title: "FinEdge Banking",
-    cat: "Mobile · FinTech",
-    stat: "50K users · 4.8★",
-    color: "#a78bfa",
-    dark: "rgba(167,139,250,0.06)",
+    title: "EduNest",
+    cat: "EdTech · Tutor Matching Platform",
+    stat: "2 cities · Nursery–12",
+    color: "#34d399",
+    dark: "rgba(52,211,153,0.06)",
   },
   {
-    title: "ShopNova Marketplace",
-    cat: "E-Commerce · Full Stack",
-    stat: "₹2Cr+ GMV/month",
+    title: "Kamla Hospital",
+    cat: "Healthcare · Multi-Speciality Hospital",
+    stat: "24/7 care · Digital presence",
+    color: "#3b82f6",
+    dark: "rgba(59,130,246,0.06)",
+  },
+  {
+    title: "EV Halt",
+    cat: "EV Infrastructure · Charging Network",
+    stat: "350+ stations · 28 cities",
     color: "#06b6d4",
     dark: "rgba(6,182,212,0.06)",
-  },
-  {
-    title: "MediAssist AI",
-    cat: "AI/ML · Healthcare",
-    stat: "94% accuracy",
-    color: "#f43f5e",
-    dark: "rgba(244,63,94,0.06)",
   },
 ];
 
