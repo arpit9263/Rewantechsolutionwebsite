@@ -1,9 +1,9 @@
 export const metadata = {
   title: 'FAQ',
-  description: 'Answers to common questions about Rewan Tech Solutions services, pricing, timelines, technology, ownership, support and project process.',
+  description: 'Frequently asked questions about working with Rewan Tech Solutions — pricing, process, technology, timelines, and everything in between.',
   openGraph: {
-    title: 'FAQ | Rewan Tech Solutions',
-    description: 'Answers to common questions about Rewan Tech Solutions services, pricing, timelines, technology, ownership, support and project process.',
+    title: 'FAQ — Rewan Tech Solutions',
+    description: 'Frequently asked questions about working with Rewan Tech Solutions — pricing, process, technology, timelines, and everything in between.',
   },
 };
 

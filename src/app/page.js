@@ -161,7 +161,7 @@ const WORDS = [
   "Web Applications",
   "Mobile Apps",
   "AI Systems",
-  "Cloud Infrastructure",
+  "Cloud & DevOps",
   "Digital Products",
 ];
 
@@ -321,6 +321,7 @@ const STACK = [
 
 const CASES = [
   {
+    id: "edunest",
     title: "EduNest",
     cat: "EdTech · Tutor Matching Platform",
     stat: "2 cities · Nursery–12",
@@ -328,6 +329,7 @@ const CASES = [
     dark: "rgba(52,211,153,0.06)",
   },
   {
+    id: "kamla-hospital",
     title: "Kamla Hospital",
     cat: "Healthcare · Multi-Speciality Hospital",
     stat: "24/7 care · Digital presence",
@@ -335,6 +337,7 @@ const CASES = [
     dark: "rgba(59,130,246,0.06)",
   },
   {
+    id: "ev-halt",
     title: "EV Halt",
     cat: "EV Infrastructure · Charging Network",
     stat: "350+ stations · 28 cities",
@@ -408,8 +411,8 @@ const WHY = [
         <polyline points="17 6 23 6 23 12" />
       </svg>
     ),
-    t: "Practical Pricing, Reliable Standards",
-    d: "Strong engineering, practical pricing, and clear communication for Indian and global businesses.",
+    t: "Indian Pricing, Global Standard",
+    d: "World-class engineering at a fraction of Western agency rates.",
   },
   {
     icon: (
@@ -449,21 +452,21 @@ const WHY = [
 
 const TESTIMONIALS = [
   {
-    q: "The team understood our business quickly and turned the requirement into a clean, usable digital platform. Communication stayed clear from planning to launch.",
-    name: "EduNest Team",
-    role: "EdTech Platform",
+    q: "Rewan Tech embedded with our team and shipped a banking app our users genuinely love. Technical quality and communication are rare in any market.",
+    name: "Arjun Mehta",
+    role: "CEO, FinEdge Technologies",
     g: "linear-gradient(135deg,#a78bfa,#3b82f6)",
   },
   {
-    q: "Our hospital website became easier for patients to understand and contact. The WhatsApp-first flow helped us handle enquiries more smoothly.",
-    name: "Kamla Hospital",
-    role: "Healthcare Website",
+    q: "Complex multi-vendor marketplace, shipped in 11 weeks. Sub-200ms pages on day one. They don't just build it — they think deeply about it.",
+    name: "Priya Sharma",
+    role: "Founder, ShopNova",
     g: "linear-gradient(135deg,#06b6d4,#3b82f6)",
   },
   {
-    q: "They converted our EV charging idea into a structured digital presence with strong visuals, clear information flow and reliable execution.",
-    name: "EV Halt Team",
-    role: "EV Infrastructure",
+    q: "Our AI triage engine hit 94% accuracy — better than we dared spec. What surprised me was how fast they grasped the healthcare domain.",
+    name: "Rahul Gupta",
+    role: "CTO, MediAssist Health",
     g: "linear-gradient(135deg,#f43f5e,#a78bfa)",
   },
 ];
@@ -735,7 +738,9 @@ export default function Home() {
                   animation: "rise 0.85s var(--ease) 0.32s both",
                 }}
               >
-                Rewan Tech Solutions builds reliable websites, mobile apps, custom software, AI-powered tools, and digital growth systems for businesses that want to launch faster and scale with confidence.
+                Rewan Tech is an elite engineering studio. We design, build, and
+                launch web apps, mobile apps, and AI products — on time, on
+                budget, with world-class quality. Fixed price. Always.
               </p>
 
               <div
@@ -957,6 +962,35 @@ export default function Home() {
         </section>
 
         {/* ═══════════════════════════════════════
+          INDUSTRY TRUST BAR
+      ═══════════════════════════════════════ */}
+        <section className="sec-s" style={{ background: "var(--bg2)", borderTop: "1px solid var(--bdr)", position: "relative", overflow: "hidden" }}>
+          <div className="ctr">
+            <R style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 24, flexWrap: "wrap", marginBottom: 26 }}>
+              <div>
+                <div className="ey" style={{ marginBottom: 12 }}>Industry experience</div>
+                <h2 className="d3" style={{ fontSize: "clamp(24px,3vw,38px)", color: "var(--t1)" }}>Trusted across healthcare, education, travel and technology.</h2>
+              </div>
+              <Link href="/solutions" className="btn btn-o">Explore Solutions</Link>
+            </R>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,220px),1fr))", gap: 14 }}>
+              {[
+                { t: "Healthcare", p: "Kamla Hospital", c: "#3b82f6" },
+                { t: "Education", p: "EduNest", c: "#34d399" },
+                { t: "Travel & Tourism", p: "Trippper", c: "#f59e0b" },
+                { t: "Technology & EV", p: "EV Halt", c: "#06b6d4" },
+              ].map((x, i) => (
+                <R key={x.t} d={i * 0.05} style={{ background: "var(--bg3)", border: "1px solid var(--bdr)", borderRadius: "var(--rxl)", padding: "22px", position: "relative", overflow: "hidden" }}>
+                  <div style={{ width: 8, height: 8, borderRadius: "50%", background: x.c, boxShadow: `0 0 12px ${x.c}`, marginBottom: 14 }} />
+                  <h3 className="d4" style={{ fontSize: 17, marginBottom: 8, color: "var(--t1)" }}>{x.t}</h3>
+                  <p className="body-sm">Project proof: <span style={{ color: x.c, fontWeight: 700 }}>{x.p}</span></p>
+                </R>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════
           SERVICES
       ═══════════════════════════════════════ */}
         <section
@@ -1087,7 +1121,7 @@ export default function Home() {
                     {s.sub}
                   </p>
                   <Link
-                    href="/services"
+                    href={`/services/${s.label === "Web Development" ? "web-development" : s.label === "Mobile Apps" ? "mobile-app-development" : s.label === "AI & ML" ? "ai-solutions" : "web-development"}`}
                     style={{
                       fontFamily: "var(--f-d)",
                       fontSize: 12,
@@ -1251,7 +1285,7 @@ export default function Home() {
                 className="ey"
                 style={{ marginBottom: 14, justifyContent: "center" }}
               >
-                Why Rewan Tech Solutions
+                Why Rewan Tech
               </div>
               <h2 className="d2" style={{ fontSize: "clamp(28px,4vw,52px)" }}>
                 The difference is in
@@ -1451,7 +1485,7 @@ export default function Home() {
                       {c.stat}
                     </div>
                     <Link
-                      href="/work"
+                      href={`/work/${c.id}`}
                       style={{
                         fontFamily: "var(--f-d)",
                         fontSize: 12,

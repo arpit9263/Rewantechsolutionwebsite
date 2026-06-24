@@ -7,10 +7,11 @@ import Image from "next/image";
 
 const LINKS = [
   { label: "Services", href: "/services" },
+  { label: "Solutions", href: "/solutions" },
   { label: "Work", href: "/work" },
-  { label: "About", href: "/about" },
   { label: "Pricing", href: "/pricing" },
   { label: "Process", href: "/process" },
+  { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/faq" },
 ];
 
@@ -127,7 +128,7 @@ export default function Navbar() {
         {/* CTA */}
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
           <a
-            href="https://wa.me/917992127047?text=Hi%2C+I+want+to+discuss+a+project"
+            href="https://wa.me/918545098444?text=Hi%20Rewan%20Tech%20Solutions%2C%20I%20want%20to%20discuss%20a%20project.%0A%0ABusiness%20Name%3A%0AIndustry%3A%0AService%20Required%3A%0ABudget%20Range%3A%0ATimeline%3A"
             target="_blank"
             className="btn btn-sm no-mob"
             style={{
@@ -310,7 +311,7 @@ export default function Navbar() {
           }}
         >
           <a
-            href="https://wa.me/917992127047"
+            href="https://wa.me/918545098444?text=Hi%20Rewan%20Tech%20Solutions%2C%20I%20want%20to%20discuss%20a%20project."
             target="_blank"
             className="btn btn-wa"
           >

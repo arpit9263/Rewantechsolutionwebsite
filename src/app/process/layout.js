@@ -1,9 +1,9 @@
 export const metadata = {
   title: 'Our Process',
-  description: 'See how Rewan Tech Solutions plans, designs, develops, tests and launches reliable digital products with clear communication at every step.',
+  description: 'From discovery to deployment — see how Rewan Tech Solutions delivers premium digital products on time and on budget, every time.',
   openGraph: {
-    title: 'Our Process | Rewan Tech Solutions',
-    description: 'See how Rewan Tech Solutions plans, designs, develops, tests and launches reliable digital products with clear communication at every step.',
+    title: 'Our Process — Rewan Tech Solutions',
+    description: 'From discovery to deployment — see how Rewan Tech Solutions delivers premium digital products on time and on budget, every time.',
   },
 };
 

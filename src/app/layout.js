@@ -1,5 +1,6 @@
+
 import './globals.css';
-import { SEO, SITE, ORG_SCHEMA, WEBSITE_SCHEMA } from '@/lib/config';
+import { SEO, SITE, CONTACT, SOCIAL } from '@/lib/config';
 
 export const metadata = {
   metadataBase: new URL(SITE.url),
@@ -15,7 +16,13 @@ export const metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   openGraph: {
     type: SEO.og.type,
@@ -24,7 +31,14 @@ export const metadata = {
     siteName: SITE.name,
     title: SEO.defaultTitle,
     description: SEO.description,
-    images: [{ url: SEO.og.image, width: SEO.og.imageWidth, height: SEO.og.imageHeight, alt: SITE.name + ' — Web, Mobile, AI & Digital Growth Solutions' }],
+    images: [
+      {
+        url: SEO.og.image,
+        width: SEO.og.imageWidth,
+        height: SEO.og.imageHeight,
+        alt: `${SITE.name} — ${SITE.tagline}`,
+      },
+    ],
   },
   twitter: {
     card: SEO.twitter.card,
@@ -34,11 +48,45 @@ export const metadata = {
     images: [SEO.og.image],
   },
   icons: {
-    icon: [{ url: '/favicon.ico', sizes: 'any' }, { url: '/icon.png', type: 'image/png+xml' }],
-    apple: '/apple-touch-icon.png',
+    icon: [{ url: '/favicon.ico', sizes: 'any' }, { url: '/icon.png', type: 'image/png' }],
   },
   manifest: '/site.webmanifest',
   alternates: { canonical: SITE.url },
+};
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: SITE.name,
+  alternateName: SITE.shortName,
+  url: SITE.url,
+  logo: `${SITE.url}${SITE.logo}`,
+  email: CONTACT.email,
+  telephone: CONTACT.phoneRaw,
+  description: SITE.description,
+  sameAs: [SOCIAL.instagram, SOCIAL.linkedin].filter(Boolean),
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      telephone: CONTACT.phoneRaw,
+      contactType: 'sales',
+      areaServed: 'IN',
+      availableLanguage: ['English', 'Hindi'],
+    },
+  ],
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE.name,
+  alternateName: SITE.shortName,
+  url: SITE.url,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${SITE.url}/?s={search_term_string}`,
+    'query-input': 'required name=search_term_string',
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -50,14 +98,8 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
         <meta name="theme-color" content="#050608" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_SCHEMA) }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       </head>
       <body>{children}</body>
     </html>

@@ -1,9 +1,9 @@
 export const metadata = {
-  title: 'Services',
-  description: 'Web development, mobile app development, AI solutions, UI/UX design, cloud infrastructure, e-commerce and digital marketing services by Rewan Tech Solutions.',
+  title: 'Our Services',
+  description: 'Full-stack web, mobile apps, AI/ML, cloud DevOps, UI/UX, e-commerce, and security audits. Fixed-price. Zero surprises.',
   openGraph: {
-    title: 'Services | Rewan Tech Solutions',
-    description: 'Web development, mobile app development, AI solutions, UI/UX design, cloud infrastructure, e-commerce and digital marketing services by Rewan Tech Solutions.',
+    title: 'Our Services — Rewan Tech Solutions',
+    description: 'Full-stack web, mobile apps, AI/ML, cloud DevOps, UI/UX, e-commerce, and security audits. Fixed-price. Zero surprises.',
   },
 };
 

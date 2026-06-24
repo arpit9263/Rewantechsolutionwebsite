@@ -1,9 +1,9 @@
 export const metadata = {
   title: 'Contact Us',
-  description: 'Contact Rewan Tech Solutions for website development, mobile apps, custom software, AI solutions and digital marketing. Get a clear project consultation and proposal.',
+  description: 'Start your project with Rewan Tech Solutions. Free 30-min discovery call. Fixed-price proposal in 24 hours. WhatsApp or email — we reply fast.',
   openGraph: {
-    title: 'Contact Us | Rewan Tech Solutions',
-    description: 'Contact Rewan Tech Solutions for website development, mobile apps, custom software, AI solutions and digital marketing. Get a clear project consultation and proposal.',
+    title: 'Contact Us — Rewan Tech Solutions',
+    description: 'Start your project with Rewan Tech Solutions. Free 30-min discovery call. Fixed-price proposal in 24 hours. WhatsApp or email — we reply fast.',
   },
 };
 

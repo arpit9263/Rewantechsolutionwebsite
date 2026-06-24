@@ -62,9 +62,9 @@ export function SectionCTA({ title, sub }) {
         <div className="ey" style={{ justifyContent:'center', marginBottom:16 }}>{sub||"Ready to start?"}</div>
         <h2 className="d2" style={{ fontSize:'clamp(28px,4.5vw,58px)', marginBottom:16 }}>
           {title||"Let's build something"}<br/>
-          <span className="grad">with clarity</span>
+          <span className="grad">extraordinary</span>
         </h2>
-        <p className="body" style={{ maxWidth:420, margin:'0 auto 40px', fontSize:16, lineHeight:1.82 }}>Free consultation · Clear scope · Practical timeline · Transparent proposal.</p>
+        <p className="body" style={{ maxWidth:420, margin:'0 auto 40px', fontSize:16, lineHeight:1.82 }}>Free consultation · Fixed-price quote in 24h · No obligation.</p>
         <div style={{ display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap' }}>
           <Link href="/contact" className="btn btn-p btn-lg">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>

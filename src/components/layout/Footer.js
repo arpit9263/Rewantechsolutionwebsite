@@ -6,7 +6,9 @@ import { CONTACT, SOCIAL } from '@/lib/config';
 
 const PAGES = [
   { l: 'Services', h: '/services' },
+  { l: 'Solutions', h: '/solutions' },
   { l: 'Work', h: '/work' },
+  { l: 'Blog', h: '/blog' },
   { l: 'About', h: '/about' },
   { l: 'Pricing', h: '/pricing' },
   { l: 'Process', h: '/process' },
@@ -15,13 +17,11 @@ const PAGES = [
 ];
 
 const SERVICES = [
-  'Web Development',
-  'Mobile Apps',
-  'AI / ML Integration',
-  'Cloud & DevOps',
-  'UI/UX Design',
-  'E-Commerce',
-  'Security Audit',
+  { l: 'Web Development', h: '/services/web-development' },
+  { l: 'Mobile Apps', h: '/services/mobile-app-development' },
+  { l: 'AI Solutions', h: '/services/ai-solutions' },
+  { l: 'Digital Marketing', h: '/services/digital-marketing' },
+  { l: 'All Services', h: '/services' },
 ];
 
 /* Footer logo from public/logo.svg */
@@ -133,11 +133,11 @@ export default function Footer() {
             <h2 className="d2" style={{ fontSize: 'clamp(24px,4vw,52px)', marginBottom: 14 }}>
               Ready to build something
               <br />
-              <span className="grad">with clarity?</span>
+              <span className="grad">extraordinary?</span>
             </h2>
 
             <p className="body" style={{ fontSize: 16, maxWidth: 420 }}>
-              Share your requirement and get a clear project plan, realistic timeline, and transparent proposal.
+              Free 30-min discovery call. Fixed-price proposal in 24h. Your code, your IP.
             </p>
           </div>
 
@@ -191,7 +191,7 @@ export default function Footer() {
             <div>
               <LogoMark />
               <p className="body-sm" style={{ maxWidth: 280, marginBottom: 24, lineHeight: 1.8 }}>
-                Rewan Tech Solutions builds websites, mobile apps, custom software, AI tools and digital growth systems for businesses across India.
+                Software development and digital growth company helping businesses build websites, mobile apps, AI-powered systems and scalable digital platforms.
               </p>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -292,9 +292,9 @@ export default function Footer() {
               </p>
 
               {SERVICES.map((s) => (
-                <Link
-                  key={s}
-                  href="/services"
+                  <Link
+                    key={typeof s === 'string' ? s : s.l}
+                    href={typeof s === 'string' ? '/services' : s.h}
                   style={{
                     display: 'block',
                     fontFamily: 'var(--f-d)',
@@ -306,7 +306,7 @@ export default function Footer() {
                   onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--bl)')}
                   onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--t2)')}
                 >
-                  {s}
+                  {typeof s === 'string' ? s : s.l}
                 </Link>
               ))}
             </div>

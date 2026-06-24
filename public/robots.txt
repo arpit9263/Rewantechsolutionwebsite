@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://rewantechsolutions.com/sitemap.xml
-Host: https://rewantechsolutions.com

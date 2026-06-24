@@ -159,7 +159,7 @@ const CASES = [
       'Responsive Engineering',
     ],
     highlights: [
-      'Modern EV visual language aligned with the charging domain',
+      'Premium EV visual language aligned with the charging domain',
       'Strong business storytelling for customers and partners',
       'Fast CTA-driven structure for clearer action paths',
       'Responsive layout with sharper trust and scale messaging',
@@ -472,7 +472,7 @@ function CaseStudyModal({ project, onClose }) {
                   marginBottom: 0,
                 }}
               >
-                A conversion-focused digital experience designed to improve brand clarity, user trust, and meaningful business outcomes.
+                A premium, conversion-focused digital experience designed to deliver brand clarity, user trust, and meaningful business outcomes.
               </p>
             </div>
           </div>
@@ -1138,7 +1138,7 @@ export default function WorkPage() {
 
       <SectionCTA
         title="Have a business idea or client project in mind?"
-        sub="Let’s turn it into a clear, reliable digital experience."
+        sub="Let’s turn it into a premium digital experience."
       />
 
       {selectedProject && (

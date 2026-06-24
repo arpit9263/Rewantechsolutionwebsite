@@ -33,7 +33,7 @@ const TEAM = [
 const TIMELINE = [
   { y:'2021', t:'Founded', d:'Rewan started with a single client and a clear vision: engineering quality India deserved.' },
   { y:'2022', t:'First 10 clients', d:'Grew to a team of 4. Shipped first enterprise SaaS and first mobile app. 100% on-time record established.' },
-  { y:'2023', t:'AI practice launched', d:'Expanded AI and automation capabilities for practical business use cases, including support tools, dashboards, and workflow automation.' },
+  { y:'2023', t:'AI practice launched', d:'Hired our first ML engineer. Shipped MediAssist AI, our first healthcare AI product.' },
   { y:'2024', t:'25 projects milestone', d:'Team of 8. Expanded to cloud architecture and data engineering practices.' },
   { y:'2025', t:'International clients', d:'First clients in UK and UAE. Remote-first team of 12. 40+ projects shipped.' },
   { y:'2026+', t:'Scale', d:'Targeting 100+ projects milestone. Launching dedicated enterprise and startup packages.' },
@@ -89,21 +89,21 @@ export default function AboutPage() {
         <div className="ctr">
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,300px),1fr))', gap:'clamp(40px,6vw,80px)', alignItems:'center' }}>
             <R c="rv-l">
-              <div className="ey" style={{ marginBottom:16 }}>How we work</div>
+              <div className="ey" style={{ marginBottom:16 }}>Meet the founder</div>
               <h2 className="d2" style={{ fontSize:'clamp(28px,4vw,52px)', marginBottom:20 }}>
-                Clear thinking<br/><span className="grad">Reliable execution</span>
+                Sarita Devi<br/><span className="grad">Founder</span>
               </h2>
               <p className="body" style={{ fontSize:16, lineHeight:1.88, marginBottom:20 }}>
-                Rewan Tech Solutions is built around one simple standard: understand the business first, then design and develop technology that is useful, stable, and easy to maintain.
+                I started Rewan Tech in 2021 with one belief: Indian engineers can build world-class products, and clients deserve to pay Indian prices for global quality.
               </p>
               <p className="body" style={{ fontSize:16, lineHeight:1.88, marginBottom:32 }}>
-                We work with businesses that need websites, mobile apps, software dashboards, AI tools, automation systems, and digital marketing support. Every project is planned with clear scope, realistic timelines, direct communication, and ownership of the final deliverables.
+                I've spent 7+ years building software for startups and enterprises. I've seen what bad agencies do to good founders — hidden costs, missed deadlines, poor communication. I built Rewan Tech to be the opposite of all of that.  Direct communication. Code that lasts.
               </p>
               <div style={{ display:'flex', gap:12, flexWrap:'wrap' }}>
                 <a href="https://wa.me/917992127047?text=Hi+Rewan%2C+I+want+to+discuss+a+project" target="_blank" className="btn btn-wa">
-                  Discuss your project
+                  WhatsApp Rewan directly
                 </a>
-                <a href="mailto:rewansolutions@gmail.com" className="btn btn-g">
+                <a href="mailto:rewantechsolutions@gmail.com" className="btn btn-g">
                   Send an Email
                 </a>
               </div>
@@ -113,10 +113,10 @@ export default function AboutPage() {
                 <div style={{ position:'absolute', top:-40, right:-40, width:200, height:200, borderRadius:'50%', background:'radial-gradient(circle,rgba(37,99,235,0.15) 0%,transparent 70%)', pointerEvents:'none' }}/>
                 {/* Avatar */}
                 <div style={{ width:80, height:80, borderRadius:'50%', background:'linear-gradient(135deg,#3b82f6,#06b6d4)', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:'var(--f-d)', fontWeight:800, fontSize:26, color:'white', marginBottom:20, boxShadow:'0 0 24px rgba(37,99,235,0.4)', position:'relative', zIndex:1 }}>
-                  RT
+                  SD
                 </div>
                 <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12, position:'relative', zIndex:1 }}>
-                  {[{n:'5+',l:'Years building'},{n:'50+',l:'Projects'},{n:'40+',l:'Clients'},{n:'100%',l:'On time'}].map(s=>(
+                  {[{n:'7+',l:'Years exp'},{n:'50+',l:'Projects'},{n:'40+',l:'Clients'},{n:'100%',l:'On time'}].map(s=>(
                     <div key={s.l} style={{ background:'var(--bg3)', borderRadius:'var(--rl)', padding:'16px 14px', border:'1px solid var(--bdr)' }}>
                       <div className="stat-n" style={{ fontSize:24, marginBottom:4 }}>{s.n}</div>
                       <div style={{ fontFamily:'var(--f-d)', fontSize:11, color:'var(--t3)' }}>{s.l}</div>
@@ -176,9 +176,9 @@ export default function AboutPage() {
       <section className="sec" style={{ background:'var(--bg)', borderTop:'1px solid var(--bdr)' }}>
         <div className="ctr" style={{ maxWidth:860 }}>
           <R style={{ marginBottom:'clamp(44px,5vw,64px)' }}>
-            <div className="ey" style={{ marginBottom:14 }}>Company journey</div>
+            <div className="ey" style={{ marginBottom:14 }}>Our story</div>
             <h2 className="d2" style={{ fontSize:'clamp(26px,4vw,48px)' }}>
-              Focused on<br/><span className="grad">useful digital products</span>
+              5 years of<br/><span className="grad">building & shipping</span>
             </h2>
           </R>
           <div style={{ position:'relative' }}>
