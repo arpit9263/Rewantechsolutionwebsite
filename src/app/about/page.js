@@ -63,7 +63,7 @@ export default function AboutPage() {
               Four beliefs we<br/><span className="grad">never compromise on</span>
             </h2>
           </R>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))', gap:16 }}>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,260px),1fr))', gap:16 }}>
             {VALUES.map((v,i)=>(
               <R key={v.t} c="rv" d={i*0.07} style={{
                 background:'var(--bg3)', border:'1px solid var(--bdr)',
@@ -87,7 +87,7 @@ export default function AboutPage() {
       {/* Founder */}
       <section className="sec" style={{ background:'var(--bg)', borderTop:'1px solid var(--bdr)' }}>
         <div className="ctr">
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(300px,1fr))', gap:'clamp(40px,6vw,80px)', alignItems:'center' }}>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,300px),1fr))', gap:'clamp(40px,6vw,80px)', alignItems:'center' }}>
             <R c="rv-l">
               <div className="ey" style={{ marginBottom:16 }}>Meet the founder</div>
               <h2 className="d2" style={{ fontSize:'clamp(28px,4vw,52px)', marginBottom:20 }}>
@@ -143,7 +143,7 @@ export default function AboutPage() {
               4 specialists.<br/><span className="grad">One standard.</span>
             </h2>
           </R>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(300px,1fr))', gap:16 }}>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(min(100%,300px),1fr))', gap:16 }}>
             {TEAM.map((m,i)=>(
               <R key={m.name} c="rv" d={i*0.07} style={{
                 background:'var(--bg3)', border:'1px solid var(--bdr)',

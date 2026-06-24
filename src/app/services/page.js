@@ -91,7 +91,7 @@ export default function ServicesPage() {
         <div className="ctr">
           {SVC.map((s, i) => (
             <R key={s.n} c={i%2===0?'rv-l':'rv-r'} style={{
-              display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))',
+              display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))',
               gap:'clamp(28px,4vw,56px)', alignItems:'start',
               padding:'clamp(36px,5vw,60px) 0',
               borderBottom: i < SVC.length-1 ? '1px solid var(--bdr)' : 'none',

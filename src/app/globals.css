@@ -350,3 +350,68 @@ input, textarea, select { font: inherit; color: var(--t1); }
     grid-column: 1 / -1;
   }
 }
+
+
+/* ── FINAL RESPONSIVE HARDENING ─────────────────────────────
+   Keeps the same design, but prevents horizontal overflow on
+   mobile/tablet and improves spacing across all pages.
+──────────────────────────────────────────────────────────── */
+html, body, #__next { width: 100%; max-width: 100%; overflow-x: hidden; }
+main, section, header, footer, nav, .ctr { max-width: 100%; }
+.ctr { width: min(100%, 1380px); }
+section, .sec, .sec-s { max-width: 100%; overflow-x: clip; }
+* { min-width: 0; }
+h1, h2, h3, h4, p, a, span, div { overflow-wrap: break-word; }
+
+@media (max-width: 1024px) {
+  .sec { padding: clamp(64px, 9vw, 96px) clamp(18px, 4vw, 40px); }
+  .sec-s { padding: clamp(44px, 7vw, 72px) clamp(18px, 4vw, 40px); }
+}
+
+@media (max-width: 768px) {
+  body { line-height: 1.58; }
+  .d1 { font-size: clamp(46px, 15vw, 68px) !important; line-height: .96 !important; letter-spacing: -0.065em !important; }
+  .d2 { font-size: clamp(30px, 10vw, 48px) !important; line-height: 1.02 !important; }
+  .d3 { font-size: clamp(24px, 8vw, 34px) !important; }
+  .body { font-size: clamp(15px, 4.2vw, 17px) !important; line-height: 1.72 !important; max-width: 100% !important; }
+  .grad, .shim { min-width: 0 !important; max-width: 100% !important; white-space: normal !important; padding-right: .08em !important; }
+  .btn, .btn-lg, .btn-xl { width: 100%; justify-content: center; white-space: normal; text-align: center; }
+  .btn-lg { padding: 16px 24px !important; font-size: 15px !important; }
+  .btn-xl { padding: 18px 26px !important; font-size: 16px !important; }
+  .tag { max-width: 100%; white-space: normal; }
+  .ey { gap: 9px; letter-spacing: .16em; }
+  .ey::before { width: 14px; }
+  .mq-wrap { margin-left: -18px; margin-right: -18px; }
+  .fab-group { right: 10px; bottom: 12px; transform: scale(.92); transform-origin: bottom right; }
+}
+
+@media (max-width: 520px) {
+  .sec { padding: 58px 16px; }
+  .sec-s { padding: 42px 16px; }
+  .d1 { font-size: clamp(42px, 14.5vw, 58px) !important; }
+  .d2 { font-size: clamp(28px, 9.5vw, 42px) !important; }
+  .body-sm { font-size: 13px; }
+  .card, [data-h] { border-radius: 22px !important; }
+  .fab-group { transform: scale(.86); }
+}
+
+@media (max-width: 380px) {
+  .d1 { font-size: clamp(38px, 14vw, 50px) !important; }
+  .btn-lg { padding-left: 18px !important; padding-right: 18px !important; }
+}
+
+@media (max-width: 768px) {
+  nav {
+    top: 12px !important;
+    left: 12px !important;
+    right: 12px !important;
+    width: auto !important;
+    transform: none !important;
+    padding: 10px 14px !important;
+    border-radius: 9999px !important;
+    background: rgba(5,6,8,0.86) !important;
+    border: 1px solid rgba(255,255,255,0.08) !important;
+    backdrop-filter: blur(20px) saturate(1.5) !important;
+  }
+  nav img, nav svg { max-width: min(220px, calc(100vw - 110px)); height: auto; }
+}

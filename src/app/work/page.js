@@ -505,7 +505,7 @@ function CaseStudyModal({ project, onClose }) {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(4, 1fr)',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 140px), 1fr))',
               gap: 14,
               marginBottom: 40,
             }}
@@ -552,7 +552,7 @@ function CaseStudyModal({ project, onClose }) {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: '1.3fr 0.7fr',
+              gridTemplateColumns: 'minmax(0,1.3fr) minmax(0,0.7fr)',
               gap: 24,
             }}
           >
@@ -859,7 +859,7 @@ function CaseStudyModal({ project, onClose }) {
 
         <style jsx>{`
           @media (max-width: 960px) {
-            div[style*="gridTemplateColumns: '1.3fr 0.7fr'"] {
+            div[style*="gridTemplateColumns: 'minmax(0,1.3fr) minmax(0,0.7fr)'"] {
               grid-template-columns: 1fr;
             }
           }
@@ -914,7 +914,7 @@ export default function WorkPage() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%,340px), 1fr))',
               gap: 28,
             }}
           >
@@ -1051,7 +1051,7 @@ export default function WorkPage() {
                     <div
                       style={{
                         display: 'grid',
-                        gridTemplateColumns: 'repeat(2, 1fr)',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))',
                         gap: '10px',
                         marginBottom: '18px',
                         position: 'relative',

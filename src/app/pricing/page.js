@@ -92,7 +92,7 @@ export default function PricingPage() {
       {tab==='packages' && (
         <section className="sec" style={{ background:'var(--bg)', borderTop:'none' }}>
           <div className="ctr">
-            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(300px,1fr))', gap:20, marginBottom:28 }}>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,300px),1fr))', gap:20, marginBottom:28 }}>
               {PACKAGES.map((p,i)=>(
                 <R key={p.name} c="rv" d={i*0.09} style={{
                   background: p.featured ? 'var(--bg2)' : 'var(--bg2)',
@@ -161,7 +161,7 @@ export default function PricingPage() {
               <h2 className="d2" style={{ fontSize:'clamp(26px,4vw,48px)' }}>Post-launch support &<br/><span className="grad">maintenance plans</span></h2>
               <p className="body" style={{ maxWidth:440, margin:'16px auto 0', fontSize:16 }}>We don't disappear after launch. Our retainer plans keep your product healthy, secure, and evolving.</p>
             </R>
-            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))', gap:20, maxWidth:1000, margin:'0 auto' }}>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,280px),1fr))', gap:20, maxWidth:1000, margin:'0 auto' }}>
               {RETAINERS.map((m,i)=>(
                 <R key={m.name} c="rv" d={i*0.09} style={{
                   background:'var(--bg2)', border:`1px solid ${m.featured?m.color+'50':'var(--bdr)'}`,
@@ -195,7 +195,7 @@ export default function PricingPage() {
               <h2 className="d2" style={{ fontSize:'clamp(26px,4vw,48px)' }}>Enhance any package</h2>
               <p className="body" style={{ maxWidth:440, marginTop:12, fontSize:16 }}>Add these services to any package at a fixed additional price.</p>
             </R>
-            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(280px,1fr))', gap:16 }}>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(min(100%,280px),1fr))', gap:16 }}>
               {ADDONS.map((a,i)=>(
                 <R key={a.name} c="rv" d={i*0.07} style={{
                   background:'var(--bg2)', border:'1px solid var(--bdr)',

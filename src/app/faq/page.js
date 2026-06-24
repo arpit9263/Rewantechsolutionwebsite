@@ -82,7 +82,7 @@ export default function FAQPage() {
 
       <section className="sec" style={{ background:'var(--bg2)', borderTop:'1px solid var(--bdr)' }}>
         <div className="ctr">
-          <div style={{ display:'grid', gridTemplateColumns:'220px 1fr', gap:'clamp(32px,5vw,60px)', alignItems:'start' }}>
+          <div style={{ display:'grid', gridTemplateColumns:'minmax(0,220px) minmax(0,1fr)', gap:'clamp(32px,5vw,60px)', alignItems:'start' }}>
 
             {/* Sidebar */}
             <div className="no-mob" style={{ position:'sticky', top:100 }}>

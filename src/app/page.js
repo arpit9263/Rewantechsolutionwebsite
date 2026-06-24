@@ -689,10 +689,11 @@ export default function Home() {
                     className="grad"
                     style={{
                       display: "inline-block",
-                      minWidth: "420px", // fixed width (adjust if needed)
-                      whiteSpace: "nowrap", //  force single line
-                      overflow: "hidden",
-                      textOverflow: "ellipsis", // optional safety
+                      minWidth: 0,
+                      maxWidth: "100%",
+                      whiteSpace: "normal",
+                      overflowWrap: "break-word",
+                      wordBreak: "break-word",
                       textAlign: "left",
                       transition: "all 0.3s",
                       opacity: show ? 1 : 0,
@@ -793,14 +794,15 @@ export default function Home() {
               <div
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "repeat(4,1fr)",
-                  gap: "0 1px",
+                  gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,150px),1fr))",
+                  gap: 1,
                   background: "var(--bdr)",
                   border: "1px solid var(--bdr)",
                   borderRadius: "var(--rxl)",
                   overflow: "hidden",
                   animation: "rise 0.85s var(--ease) 0.48s both",
                   maxWidth: 760,
+                  width: "100%",
                 }}
               >
                 {METRICS.slice(0, 4).map((m) => (
@@ -1011,7 +1013,7 @@ export default function Home() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))",
+                gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,280px),1fr))",
                 gap: 16,
               }}
             >
@@ -1168,7 +1170,7 @@ export default function Home() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))",
+                gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,200px),1fr))",
                 gap: 1,
                 background: "var(--bdr)",
                 border: "1px solid var(--bdr)",
@@ -1265,7 +1267,7 @@ export default function Home() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))",
+                gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,280px),1fr))",
                 gap: 16,
               }}
             >
@@ -1378,7 +1380,7 @@ export default function Home() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
+                gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,300px),1fr))",
                 gap: 20,
               }}
             >
